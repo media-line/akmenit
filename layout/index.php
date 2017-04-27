@@ -15,23 +15,36 @@
     <link href="/layout/responsive.css" rel="stylesheet">
 </head>
 <body>
-<div class="top-block">
-    <div class="wrapper">
-        <header>
-            <div class="top-phone">
-                <a class="top-phone__top" href="tel:+375292693999">+375 (29) 269-39-99</a>
-                <p class="top-phone__bottom">Перезвонить вам?</p>
+<div class="main-top-block">
+    <div class="top-block">
+        <div class="wrapper">
+            <header>
+                <div class="top-phone">
+                    <a class="top-phone__top" href="tel:+375292693999">+375 (29) 269-39-99</a>
+                    <p class="top-phone__bottom">Перезвонить вам?</p>
+                </div>
+            </header>
+            <div class="wrapper_narrow center-column">
+                <div class="title center-column">
+                    <p class="title_first-row">Лучшая цена</p>
+                    <p class="title_second-row">на розы из Эквадора и Колумбии</p>
+                    <p class="gold-italic">от 2,5р за услугу</p>
+                </div>
+                <div><!-- форма обратной связи --></div>
             </div>
-        </header>
-        <div class="wrapper_narrow center-column">
-            <div class="title center-column">
-                <p class="title_first-row">Лучшая цена</p>
-                <p class="title_second-row">на розы из Эквадора и Колумбии</p>
-                <p class="gold-italic">от 2,5р за услугу</p>
-            </div>
-            <div><!-- форма обратной связи --></div>
         </div>
     </div>
+    <div class="form-picking wrapper_narrow">
+        <p class="form-picking_title">Поможем подобрать букет к любому событию</p>
+        <div class="form-picking__inputs">
+            <input class="form-picking__inputs_input" type="text" placeholder="Ваше имя" required name="name">
+            <input class="form-picking__inputs_input" type="tel" placeholder="Ваш телефон" required name="phone">
+            <input class="form-picking__inputs_input" type="text" placeholder="Кому дарите?" required name="target">
+            <input class="form-picking__inputs_input" type="number" placeholder="Ваш бюджет" required name="money">
+        </div>
+        <input class="button" type="button" value="Подобрать букет">
+    </div>
+    <div class="bottom-block"></div>
 </div>
 </body>
 </html>

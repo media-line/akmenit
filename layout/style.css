@@ -1,6 +1,6 @@
 /*fonts*/
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700&subset=cyrillic');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700&subset=cyrillic');
 
 /*working styles*/
@@ -38,12 +38,49 @@ body {
     font-family: 'Playfair Display', serif;
 }
 
+input:focus {
+    border:none !important;
+}
+
+.button {
+    border-radius: 25px;
+    background-color: #c4a04d;
+    background-image: url(./image/button_blick.jpg);
+    background-size: cover;
+    background-position: top center;
+    color: #fffcf7;
+    text-shadow: 3px 3px 3px grey;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 15px;
+    padding: 20px 45px;
+    text-transform: uppercase;
+    border: none;
+    box-shadow: 2px 13px 16px 3px #e6e3dd;
+    transition: 30ms;
+}
+
+    .button:active {
+        box-shadow: 2px 13px 16px 0px #e6e3dd;
+        border: none;
+        text-shadow: none;
+        transition: 30ms;
+    }
+
+    .button:focus {
+        border: none;
+    }
+
 /*DOM styles*/
 
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+.main-top-block {
+    height: auto;
+    width: 100%;
+    background-color: #fff;
+    background-image: url("/layout/image/main-top-block_bcg.jpg");
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
 }
 
 .top-block {
@@ -53,6 +90,12 @@ header {
     background-size: cover;
     background-position: top center;
     min-height: 73vh;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
 .top-phone {
@@ -97,7 +140,6 @@ header {
 .title {
     color: #fff;
     padding: 0 10px;
-    width: 100%;
 }
 
         .title_first-row {
@@ -111,3 +153,54 @@ header {
             text-align: center;
             margin-bottom: 20px;
         }
+
+.form-picking {
+    background-color: #fff;
+    border: 6px solid #cbaa5e;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    position: relative;
+    top: -265px;
+    padding-bottom: 20px;
+}
+
+    .form-picking_title {
+        color: #000;
+        font-family: 'Playfair Display';
+        font-size: 30px;
+        font-weight: bold;
+        margin-top: 40px;
+        margin-bottom: 35px;
+        text-align: center;
+    }
+
+    .form-picking__inputs {
+        display: flex;
+        flex-direction: column;
+    }
+
+        .form-picking__inputs_input {
+            border-radius: 20px;
+            border: 1px solid #d4d4d4;
+            color: #000;
+            background-color: #fff;
+            padding: 15px 25px;
+            font-family: 'Roboto';
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+            .form-picking__inputs_input::-webkit-input-placeholder {
+                color:#b3b3b3;
+            }
+            .form-picking__inputs_input::-moz-placeholder {
+                color:#b3b3b3;
+            }/* Firefox 19+ */
+            .form-picking__inputs_input:-moz-placeholder {
+                color:#b3b3b3;
+            }/* Firefox 18- */
+            .form-picking__inputs_input:-ms-input-placeholder {
+                color:#b3b3b3;
+            }
