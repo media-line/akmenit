@@ -3,3 +3,4 @@
 /bitrix/tmp
 /bitrix/managed_cache
 /upload/tmp
+/bitrix/*.log

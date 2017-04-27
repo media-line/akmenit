@@ -19,8 +19,8 @@
     <div class="wrapper">
         <header>
             <div class="top-phone">
-                +375 (29) 269-39-99<br/>
-                Перезвонить вам?
+                <p class="top-phone__top">+375 (29) 269-39-99</p>
+                <p class="top-phone__bottom">Перезвонить вам?</p>
             </div>
         </header>
         <div> <!-- обертка на блоки в шапке -->

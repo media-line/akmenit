@@ -1,13 +1,29 @@
-@media all and (max-width: 320px) {}
+@media all and (min-width: 320px) {
 
-@media all and (max-width: 480px) {}
+}
 
-@media all and (max-width: 600px) {}
+@media all and (min-width: 480px) {
+}
 
-@media all and (max-width: 800px) {}
+@media all and (min-width: 600px) {
 
-@media all and (max-width: 1024px) {}
+}
 
-@media all and (max-width: 1300px) {}
+@media all and (min-width: 800px) {
+}
 
-@media all and (max-width: 1600px) {}
+@media all and (min-width: 1024px) {
+
+}
+
+@media all and (min-width: 1170px) {
+    .wrapper {
+        width: 1170px;
+    }
+}
+
+@media all and (min-width: 1300px) {
+}
+
+@media all and (min-width: 1600px) {
+}

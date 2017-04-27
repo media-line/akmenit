@@ -1,15 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-body {
+* {
     margin: 0;
     padding: 0;
+}
+
+body {
     font-family: 'Playfair Display', serif;
     font-size: 16px;
 }
 
 .wrapper {
     width: 100%;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
 .top-block {
@@ -23,9 +32,20 @@ body {
 
 .top-phone {
     font-family: 'Roboto', sans-serif;
-    font-size: 22px;
     color: #fff;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    flex-direction: column;
+    width: 63%;
+    padding: 10px;
 }
+
+    .top-phone__top {
+        font-size: 22px;
+    }
+
+    .top-phone__bottom {
+        font-size: 12px;
+        border-bottom: 2px #fff dotted;
+        font-weight: 100;
+        width: 110px;
+    }
