@@ -6,7 +6,9 @@
 }
 
 @media all and (min-width: 600px) {
-
+    .top-phone {
+        align-items: flex-start;
+    }
 }
 
 @media all and (min-width: 800px) {
@@ -19,6 +21,14 @@
 @media all and (min-width: 1170px) {
     .wrapper {
         width: 1170px;
+    }
+
+    .top-phone {
+        padding: 15px;
+    }
+
+    .top-phone__bottom {
+        margin-top: 5px;
     }
 }
 

@@ -35,12 +35,15 @@ header {
     color: #fff;
     display: flex;
     flex-direction: column;
-    width: 63%;
+    align-items: flex-end;
     padding: 10px;
 }
 
     .top-phone__top {
         font-size: 22px;
+        width: 100%;
+        text-decoration: none;
+        color: #fff;
     }
 
     .top-phone__bottom {
@@ -48,4 +51,6 @@ header {
         border-bottom: 2px #fff dotted;
         font-weight: 100;
         width: 110px;
+        margin-top: 20px;
+        cursor: pointer;
     }

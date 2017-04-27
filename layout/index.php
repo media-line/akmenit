@@ -19,7 +19,7 @@
     <div class="wrapper">
         <header>
             <div class="top-phone">
-                <p class="top-phone__top">+375 (29) 269-39-99</p>
+                <a class="top-phone__top" href="tel:+375292693999">+375 (29) 269-39-99</a>
                 <p class="top-phone__bottom">Перезвонить вам?</p>
             </div>
         </header>
