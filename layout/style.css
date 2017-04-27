@@ -37,7 +37,15 @@ header {
     flex-direction: column;
     align-items: flex-end;
     padding: 10px;
+    position: relative;
 }
+
+    .top-phone__top:before {
+        content: url(./image/top-phone__top_icon.png);
+        position: absolute;
+        left: -16px;
+        padding-top: 3px;
+    }
 
     .top-phone__top {
         font-size: 22px;
