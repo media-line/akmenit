@@ -23,12 +23,11 @@
                 <p class="top-phone__bottom">Перезвонить вам?</p>
             </div>
         </header>
-        <div> <!-- обертка на блоки в шапке -->
-            <div>
-                <!-- заголовок -->
-                Лучшая цена<br/>
-                на розы из Эквадора и Колумбии<br/>
-                от 2,5р за услугу
+        <div class="wrapper_narrow center-column">
+            <div class="title center-column">
+                <p class="title_first-row">Лучшая цена</p>
+                <p class="title_second-row">на розы из Эквадора и Колумбии</p>
+                <p class="gold-italic">от 2,5р за услугу</p>
             </div>
             <div><!-- форма обратной связи --></div>
         </div>
