@@ -1,7 +1,7 @@
 /*fonts*/
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700&subset=cyrillic');
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,900&subset=cyrillic');
 
 /*working styles*/
 
@@ -17,12 +17,14 @@ body {
 
 .wrapper {
     width: 100%;
+    box-sizing: border-box;
 }
 
 .wrapper_narrow {
     width: 100%;
     max-width: 750px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .center-column {
@@ -70,6 +72,18 @@ input:focus {
     .button:focus {
         border: none;
     }
+
+.title_big {
+    color: #000;
+    font-family: 'Playfair Display';
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.description {
+    text-align: center;
+}
 
 /*DOM styles*/
 
@@ -164,13 +178,15 @@ header {
     position: relative;
     top: -265px;
     padding-bottom: 20px;
+    margin-bottom: -225px;
+    box-shadow: 3px -2px 100px 0px grey;
 }
 
     .form-picking_title {
         color: #000;
         font-family: 'Playfair Display';
         font-size: 30px;
-        font-weight: bold;
+        font-weight: bolder;
         margin-top: 40px;
         margin-bottom: 35px;
         text-align: center;
@@ -204,3 +220,45 @@ header {
             .form-picking__inputs_input:-ms-input-placeholder {
                 color:#b3b3b3;
             }
+
+.bottom-block {
+    padding: 0 10px;
+}
+
+.title_big:before, .title_big:after {
+    content: url("./image/flourish.png");
+    display: none;
+}
+
+    .title_big:before {
+        padding-right: 20px;
+    }
+
+    .title_big:after {
+        padding-left: 20px;
+    }
+
+.title_big {
+    text-align: center;
+}
+
+.advantages {
+    width: 100%;
+    color: #000;
+    font-family: "Playfair Display";
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.advantage {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.advantage img {
+    width: auto;
+    margin: 0 auto;
+}

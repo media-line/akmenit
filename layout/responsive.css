@@ -40,9 +40,22 @@
         width: 245px;
         margin: 0 auto;
     }
+
+    .advantages {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .advantage {
+        min-height: 360px;
+    }
 }
 
 @media all and (min-width: 800px) {
+    .title {
+        font-size: 40px;
+    }
+
     .form-picking_title {
         font-size: 40px;
     }
@@ -62,6 +75,14 @@
         .form-picking__inputs_input:nth-child(odd) {
             margin-right: 30px;
         }
+
+    .title_big:before, .title_big:after {
+        display: inline-block;
+    }
+
+    .advantage {
+        min-height: 330px;
+    }
 }
 
 @media all and (min-width: 1024px) {
@@ -78,7 +99,7 @@
 
 @media all and (min-width: 1170px) {
     .wrapper {
-        width: 1170px;
+        width: 1150px;
         margin: 0 auto;
     }
 
@@ -88,6 +109,28 @@
 
     .top-phone__bottom {
         margin-top: 5px;
+    }
+
+    .advantages {
+        flex-direction: column;
+    }
+
+        .advantages_row {
+            display: flex;
+            flex-direction: row;
+            margin-top: 35px;
+        }
+
+        .description {
+            padding: 0 10%;
+        }
+
+    .advantage {
+        width: 33.3%;
+    }
+
+    .form-picking {
+        margin-bottom: -190px;
     }
 }
 

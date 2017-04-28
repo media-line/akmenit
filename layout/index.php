@@ -44,7 +44,39 @@
         </div>
         <input class="button" type="button" value="Подобрать букет">
     </div>
-    <div class="bottom-block"></div>
+    <div class="bottom-block wrapper">
+        <p class="title_big">Почему стоит заказать у нас?</p>
+        <div class="advantages">
+            <div class="advantages_row">
+                <div class="advantage">
+                    <img src="/layout/image/advantages/first-importer.png" alt="Первый импортер" />
+                    <p class="description">Первый импортер в РБ - цена без лишних надбавок</p>
+                </div>
+                <div class="advantage">
+                    <img src="/layout/image/advantages/fresh-flowers.png" alt="Свежие цветы" />
+                    <p class="description">Всегда только свежие цветы</p>
+                </div>
+                <div class="advantage">
+                    <img src="/layout/image/advantages/assortiment.png" alt="Разнообразный ассортимент" />
+                    <p class="description">В наличии разнообразный ассортимент - подберем именно то, что вам нужно</p>
+                </div>
+            </div>
+            <div class="advantages_row">
+                <div class="advantage">
+                    <img src="/layout/image/advantages/programm-of-loyality.png" alt="Программа лояльности" />
+                    <p class="description">Программа лояльности - Вы захотите стать потенциальным клиентом</p>
+                </div>
+                <div class="advantage">
+                    <img src="/layout/image/advantages/florists.png" alt="Опытные флористы" />
+                    <p class="description">Оформление букета опытными флористами</p>
+                </div>
+                <div class="advantage">
+                    <img src="/layout/image/advantages/shipping.png" alt="Доставка" />
+                    <p class="description">Доставка по городу Минску и самовывоз</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>
