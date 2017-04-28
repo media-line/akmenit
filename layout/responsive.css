@@ -46,6 +46,22 @@
     .form-picking_title {
         font-size: 40px;
     }
+
+    .form-picking {
+        padding-bottom: 50px;
+    }
+
+    .form-picking__inputs {
+        margin-bottom: 15px;
+    }
+
+    .form-picking__inputs_input {
+        margin-bottom: 25px;
+    }
+
+        .form-picking__inputs_input:nth-child(odd) {
+            margin-right: 30px;
+        }
 }
 
 @media all and (min-width: 1024px) {
