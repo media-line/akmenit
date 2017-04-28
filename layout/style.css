@@ -25,6 +25,7 @@ body {
     max-width: 750px;
     margin: 0 auto;
     box-sizing: border-box;
+    padding: 0 10px;
 }
 
 .center-column {
@@ -60,6 +61,8 @@ input:focus {
     border: none;
     box-shadow: 2px 13px 16px 3px #e6e3dd;
     transition: 30ms;
+    text-align: center;
+    cursor: pointer;
 }
 
     .button:active {
@@ -79,10 +82,33 @@ input:focus {
     font-size: 30px;
     font-weight: 900;
     text-transform: uppercase;
+    text-align: center;
+    padding: 15px 0;
 }
+
+    .title_big_w {
+        color: #fff;
+    }
+
+    .title_big:before, .title_big:after {
+        content: url("./image/flourish.png");
+        display: none;
+    }
+
+    .title_big:before {
+        padding-right: 20px;
+    }
+
+    .title_big:after {
+        padding-left: 20px;
+    }
 
 .description {
     text-align: center;
+}
+
+.first-line {
+    font-size: 20px;
 }
 
 /*DOM styles*/
@@ -160,6 +186,7 @@ header {
             font-size: 35px;
             font-weight: bold;
             text-transform: uppercase;
+            text-align: center;
         }
 
         .title_second-row {
@@ -222,24 +249,9 @@ header {
             }
 
 .bottom-block {
-    padding: 0 10px;
-}
-
-.title_big:before, .title_big:after {
-    content: url("./image/flourish.png");
-    display: none;
-}
-
-    .title_big:before {
-        padding-right: 20px;
-    }
-
-    .title_big:after {
-        padding-left: 20px;
-    }
-
-.title_big {
-    text-align: center;
+    padding: 10px;
+    margin-bottom: -10px;
+    padding-bottom: 30px;
 }
 
 .advantages {
@@ -262,3 +274,94 @@ header {
     width: auto;
     margin: 0 auto;
 }
+
+.like-bouquet {
+    background-color: #4b3f39;
+    background-image: url(/layout/image/like-bouquet_bcg.jpg);
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+    .like-bouquet .gold-italic {
+        margin: 20px 0;
+    }
+
+    .like-bouquet .button {
+        margin-bottom: 20px;
+        box-shadow: 2px 13px 16px 3px rgba(31, 27, 22, 0.35);
+    }
+
+.bouquet .title_big {
+    text-transform: none;
+}
+
+    .bouquet .title_big:after {
+        content: url("/layout/image/flourish.png");
+    }
+
+.desc_ltl {
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #b3b3b3;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.bouquet-wrap {
+    width: 100%;
+}
+
+.bouquet__column {
+    height: 750px;
+    margin-bottom: 39px;
+}
+
+.bouquet__column .element {
+    margin-bottom: 39px;
+}
+
+    .bouquet__column:nth-child(1) .top-element, .bouquet__column:nth-child(4) .top-element, .bouquet__column:nth-child(2) .bottom-element, .bouquet__column:nth-child(3) .bottom-element, .bouquet__column:nth-child(5) .bottom-element {
+        height: 430px;
+    }
+
+.bouquet__column:nth-child(2) .top-element, .bouquet__column:nth-child(3) .top-element, .bouquet__column:nth-child(5) .top-element, .bouquet__column:nth-child(1) .bottom-element, .bouquet__column:nth-child(4) .bottom-element {
+    height: 280px;
+}
+
+
+/*tmp styles*/
+.bouquet__column:nth-child(1) > .top-element {
+    background-image: url("/layout/image/product/1.jpg");
+}
+.bouquet__column:nth-child(1) > .bottom-element {
+    background-image: url("/layout/image/product/2.jpg");
+}
+.bouquet__column:nth-child(2) > .top-element {
+    background-image: url("/layout/image/product/3.jpg");
+}
+.bouquet__column:nth-child(2) > .bottom-element {
+    background-image: url("/layout/image/product/4.jpg");
+}
+.bouquet__column:nth-child(3) > .top-element {
+    background-image: url("/layout/image/product/5.jpg");
+}
+.bouquet__column:nth-child(3) > .bottom-element {
+    background-image: url("/layout/image/product/6.jpg");
+}
+.bouquet__column:nth-child(4) > .top-element {
+    background-image: url("/layout/image/product/7.jpg");
+}
+.bouquet__column:nth-child(4) > .bottom-element {
+    background-image: url("/layout/image/product/8.jpg");
+}
+.bouquet__column:nth-child(5) > .top-element {
+    background-image: url("/layout/image/product/9.jpg");
+}
+.bouquet__column:nth-child(5) > .bottom-element {
+    background-image: url("/layout/image/product/10.jpg");
+}
+/*!tmp styles*/

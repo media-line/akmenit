@@ -1,6 +1,3 @@
-<?php
-?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -30,7 +27,6 @@
                     <p class="title_second-row">на розы из Эквадора и Колумбии</p>
                     <p class="gold-italic">от 2,5р за услугу</p>
                 </div>
-                <div><!-- форма обратной связи --></div>
             </div>
         </div>
     </div>
@@ -49,31 +45,95 @@
         <div class="advantages">
             <div class="advantages_row">
                 <div class="advantage">
-                    <img src="/layout/image/advantages/first-importer.png" alt="Первый импортер" />
+                    <img src="/layout/image/advantages/first-importer.png" alt="Первый импортер"/>
                     <p class="description">Первый импортер в РБ - цена без лишних надбавок</p>
                 </div>
                 <div class="advantage">
-                    <img src="/layout/image/advantages/fresh-flowers.png" alt="Свежие цветы" />
+                    <img src="/layout/image/advantages/fresh-flowers.png" alt="Свежие цветы"/>
                     <p class="description">Всегда только свежие цветы</p>
                 </div>
                 <div class="advantage">
-                    <img src="/layout/image/advantages/assortiment.png" alt="Разнообразный ассортимент" />
+                    <img src="/layout/image/advantages/assortiment.png" alt="Разнообразный ассортимент"/>
                     <p class="description">В наличии разнообразный ассортимент - подберем именно то, что вам нужно</p>
                 </div>
             </div>
             <div class="advantages_row">
                 <div class="advantage">
-                    <img src="/layout/image/advantages/programm-of-loyality.png" alt="Программа лояльности" />
+                    <img src="/layout/image/advantages/programm-of-loyality.png" alt="Программа лояльности"/>
                     <p class="description">Программа лояльности - Вы захотите стать потенциальным клиентом</p>
                 </div>
                 <div class="advantage">
-                    <img src="/layout/image/advantages/florists.png" alt="Опытные флористы" />
+                    <img src="/layout/image/advantages/florists.png" alt="Опытные флористы"/>
                     <p class="description">Оформление букета опытными флористами</p>
                 </div>
                 <div class="advantage">
-                    <img src="/layout/image/advantages/shipping.png" alt="Доставка" />
+                    <img src="/layout/image/advantages/shipping.png" alt="Доставка"/>
                     <p class="description">Доставка по городу Минску и самовывоз</p>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="like-bouquet">
+    <div class="wrapper_narrow">
+        <div class="title_big title_big_w">
+            Нравиться букет?
+        </div>
+        <div class="first-line">
+            прикрепи его фото и мы сделаем такой же
+        </div>
+        <div class="gold-italic">
+            co скидкой!
+        </div>
+        <input class="button" value="Загрузи свой букет"/>
+    </div>
+</div>
+<div class="bouquet">
+    <div class="title_big">
+        Букеты из роз
+    </div>
+    <div class="desc_ltl">
+        Доставим сегодня
+    </div>
+    <div class="bouquet-wrap">
+        <div class="bouquet__column">
+            <div class="element top-element">
+                <p class="product-name"></p>
+            </div>
+            <div class="element bottom-element">
+                <p class="product-name"></p>
+            </div>
+        </div>
+        <div class="bouquet__column">
+            <div class="element top-element">
+                <p class="product-name"></p>
+            </div>
+            <div class="element bottom-element">
+                <p class="product-name"></p>
+            </div>
+        </div>
+        <div class="bouquet__column">
+            <div class="element top-element">
+                <p class="product-name"></p>
+            </div>
+            <div class="element bottom-element">
+                <p class="product-name"></p>
+            </div>
+        </div>
+        <div class="bouquet__column">
+            <div class="element top-element">
+                <p class="product-name"></p>
+            </div>
+            <div class="element bottom-element">
+                <p class="product-name"></p>
+            </div>
+        </div>
+        <div class="bouquet__column">
+            <div class="element top-element">
+                <p class="product-name"></p>
+            </div>
+            <div class="element bottom-element">
+                <p class="product-name"></p>
             </div>
         </div>
     </div>

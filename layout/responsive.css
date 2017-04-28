@@ -10,11 +10,27 @@
     .title_second-row {
         font-size: 27px;
     }
+
+    .like-bouquet .title_big:after {
+        display: block;
+    }
+
+    .like-bouquet .title_big:before {
+        display: none;
+    }
+
+    .like-bouquet .title_big {
+        padding-top: 30px;
+    }
 }
 
 @media all and (min-width: 600px) {
     .top-phone {
         align-items: flex-start;
+    }
+
+    .title_big {
+        font-size: 44px;
     }
 
     .title_second-row {
@@ -49,6 +65,14 @@
     .advantage {
         min-height: 360px;
     }
+
+    .like-bouquet .title_big {
+        padding-top: 30px;
+    }
+
+    .like-bouquet .title_big:after {
+        padding-top: 20px;
+    }
 }
 
 @media all and (min-width: 800px) {
@@ -82,6 +106,24 @@
 
     .advantage {
         min-height: 330px;
+    }
+
+    .like-bouquet .title_big {
+        padding-top: 75px;
+    }
+
+    .like-bouquet .title_big:after {
+        padding-top: 15px;
+    }
+
+    .like-bouquet .first-line {
+        margin-top: 35px;
+        margin-bottom: 15px;
+    }
+
+    .like-bouquet .button {
+        margin-top: 65px;
+        margin-bottom: 95px;
     }
 }
 
@@ -131,6 +173,10 @@
 
     .form-picking {
         margin-bottom: -190px;
+    }
+
+    .like-bouquet {
+        margin-top: -5px;
     }
 }
 
