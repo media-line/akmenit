@@ -318,10 +318,16 @@ header {
 .bouquet__column {
     height: 750px;
     margin-bottom: 39px;
+    display: none;
+}
+
+.bouquet__column:nth-child(1) {
+    display: block;
 }
 
 .bouquet__column .element {
     margin-bottom: 39px;
+    background-size: 100% auto;
 }
 
     .bouquet__column:nth-child(1) .top-element, .bouquet__column:nth-child(4) .top-element, .bouquet__column:nth-child(2) .bottom-element, .bouquet__column:nth-child(3) .bottom-element, .bouquet__column:nth-child(5) .bottom-element {
@@ -331,7 +337,6 @@ header {
 .bouquet__column:nth-child(2) .top-element, .bouquet__column:nth-child(3) .top-element, .bouquet__column:nth-child(5) .top-element, .bouquet__column:nth-child(1) .bottom-element, .bouquet__column:nth-child(4) .bottom-element {
     height: 280px;
 }
-
 
 /*tmp styles*/
 .bouquet__column:nth-child(1) > .top-element {

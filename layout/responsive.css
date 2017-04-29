@@ -73,6 +73,29 @@
     .like-bouquet .title_big:after {
         padding-top: 20px;
     }
+
+.bouquet-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bouquet__column {
+    width: 49%;
+}
+
+.bouquet__column:nth-child(2) {
+    display: block;
+}
+
+    .bouquet__column:nth-child(1) .top-element, .bouquet__column:nth-child(4) .top-element, .bouquet__column:nth-child(2) .bottom-element, .bouquet__column:nth-child(3) .bottom-element, .bouquet__column:nth-child(5) .bottom-element {
+        height: 350px;
+    }
+
+    .bouquet__column:nth-child(2) .top-element, .bouquet__column:nth-child(3) .top-element, .bouquet__column:nth-child(5) .top-element, .bouquet__column:nth-child(1) .bottom-element, .bouquet__column:nth-child(4) .bottom-element {
+        height: 225px;
+    }
+
 }
 
 @media all and (min-width: 800px) {
@@ -125,6 +148,16 @@
         margin-top: 65px;
         margin-bottom: 95px;
     }
+
+.bouquet__column {
+    width: 33.3%;
+    padding: 0 10px;
+}
+
+    .bouquet__column:nth-child(4) {
+        display: block;
+    }
+
 }
 
 @media all and (min-width: 1024px) {
