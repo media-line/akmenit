@@ -276,7 +276,7 @@
     </div>
     <div class="wrapper bottom-footer">
         <div>&#169; 2017, Акменита</div>
-        <div>Разработка сайта<a href="http://www.medialine.by" target="_blank" class="copiright"><img src="image/copiright.png" /></a></div>
+        <div>Разработка сайта<a href="http://www.medialine.by" target="_blank" class="copiright"><img src="/image/copiright.png" /></a></div>
     </div>
 </footer>
 </body>
