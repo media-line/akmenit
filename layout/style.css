@@ -388,6 +388,16 @@ header {
     padding: 20px 77px;
 }
 
+footer {
+    background-image: url("/");
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 /*tmp styles*/
 .bouquet__column:nth-child(1) > .top-element {
     background-image: url("/layout/image/product/1.jpg");
