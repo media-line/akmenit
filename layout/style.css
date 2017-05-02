@@ -342,6 +342,7 @@ header {
     margin-bottom: 39px;
     display: none;
     width: 100%;
+    transition: 2s;
 }
 
 .bouquet__column:nth-child(1) {
