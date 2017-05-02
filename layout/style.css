@@ -290,6 +290,7 @@ header {
     .like-bouquet .button {
         margin-bottom: 20px;
         box-shadow: 2px 13px 16px 3px rgba(31, 27, 22, 0.35);
+        padding: 20px 51px;
     }
 
 .bouquet .title_big {
@@ -311,14 +312,33 @@ header {
     padding: 10px 0;
 }
 
+.title_big_boquet {
+    padding-top: 30px;
+}
+
+.bouquet .title_big:before {
+    display: none;
+}
+
+.bouquet .title_big:after {
+    display: block;
+}
+
+.main-bouquet-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .bouquet-wrap {
     width: 100%;
 }
 
 .bouquet__column {
-    height: 750px;
+    height: 674px;
     margin-bottom: 39px;
     display: none;
+    width: 100%;
 }
 
 .bouquet__column:nth-child(1) {
@@ -328,14 +348,44 @@ header {
 .bouquet__column .element {
     margin-bottom: 39px;
     background-size: 100% auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    transition: 2s;
+}
+
+.bouquet__column .element:hover {
+    background-image: url("/layout/image/product/one.jpg") !important;
+    background-size: 100% auto;
+    transition: 2s;
+} 
+
+.product-name {
+    color: #fff;
+    font-family: "Playfair Display";
+    font-style: italic;
+    font-size: 22px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.product-name:before {
+    content: url("/layout/image/flourish-product-name.png");
+    display: block;
 }
 
     .bouquet__column:nth-child(1) .top-element, .bouquet__column:nth-child(4) .top-element, .bouquet__column:nth-child(2) .bottom-element, .bouquet__column:nth-child(3) .bottom-element, .bouquet__column:nth-child(5) .bottom-element {
-        height: 430px;
+        height: 384px;
     }
 
 .bouquet__column:nth-child(2) .top-element, .bouquet__column:nth-child(3) .top-element, .bouquet__column:nth-child(5) .top-element, .bouquet__column:nth-child(1) .bottom-element, .bouquet__column:nth-child(4) .bottom-element {
-    height: 280px;
+    height: 250px;
+}
+
+.bouquet .button {
+    margin-bottom: 20px;
+    padding: 20px 77px;
 }
 
 /*tmp styles*/

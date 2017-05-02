@@ -77,7 +77,7 @@
 <div class="like-bouquet">
     <div class="wrapper_narrow">
         <div class="title_big title_big_w">
-            Нравиться букет?
+            Нравится букет?
         </div>
         <div class="first-line">
             прикрепи его фото и мы сделаем такой же
@@ -89,55 +89,166 @@
     </div>
 </div>
 <div class="bouquet">
-    <div class="title_big">
+    <div class="title_big title_big_boquet">
         Букеты из роз
     </div>
     <div class="desc_ltl">
         Доставим сегодня
     </div>
-    <div class="bouquet-wrap">
-        <div class="bouquet__column">
-            <div class="element top-element">
-                <p class="product-name"></p>
+    <div class="main-bouquet-wrap">
+        <div class="bouquet-wrap">
+            <div class="bouquet__column">
+                <div class="element top-element">
+                    <p class="product-name">Букет 1</p>
+                </div>
+                <div class="element bottom-element">
+                    <p class="product-name">Букет 2</p>
+                </div>
             </div>
-            <div class="element bottom-element">
-                <p class="product-name"></p>
+            <div class="bouquet__column">
+                <div class="element top-element">
+                    <p class="product-name">Букет 3</p>
+                </div>
+                <div class="element bottom-element">
+                    <p class="product-name">Букет 4</p>
+                </div>
+            </div>
+            <div class="bouquet__column">
+                <div class="element top-element">
+                    <p class="product-name">Букет 5</p>
+                </div>
+                <div class="element bottom-element">
+                    <p class="product-name">Букет 6</p>
+                </div>
+            </div>
+            <div class="bouquet__column">
+                <div class="element top-element">
+                    <p class="product-name">Букет 7</p>
+                </div>
+                <div class="element bottom-element">
+                    <p class="product-name">Букет 8</p>
+                </div>
+            </div>
+            <div class="bouquet__column">
+                <div class="element top-element">
+                    <p class="product-name">Букет 9</p>
+                </div>
+                <div class="element bottom-element">
+                    <p class="product-name">Букет 10</p>
+                </div>
             </div>
         </div>
-        <div class="bouquet__column">
-            <div class="element top-element">
-                <p class="product-name"></p>
-            </div>
-            <div class="element bottom-element">
-                <p class="product-name"></p>
-            </div>
-        </div>
-        <div class="bouquet__column">
-            <div class="element top-element">
-                <p class="product-name"></p>
-            </div>
-            <div class="element bottom-element">
-                <p class="product-name"></p>
-            </div>
-        </div>
-        <div class="bouquet__column">
-            <div class="element top-element">
-                <p class="product-name"></p>
-            </div>
-            <div class="element bottom-element">
-                <p class="product-name"></p>
-            </div>
-        </div>
-        <div class="bouquet__column">
-            <div class="element top-element">
-                <p class="product-name"></p>
-            </div>
-            <div class="element bottom-element">
-                <p class="product-name"></p>
-            </div>
-        </div>
+        <input type="button" class="button" value="Смотреть ещё">
     </div>
-    <input type="button" class="button" value="Смотреть ещё">
 </div>
+<div class="bouquet">
+    <div class="title_big title_big_boquet">
+        Миксовые букеты
+    </div>
+    <div class="desc_ltl">
+        сделаем к нужному дню
+    </div>
+    <div class="main-bouquet-wrap">
+        <div class="bouquet-wrap">
+            <div class="bouquet__column">
+                <div class="element top-element">
+                    <p class="product-name">Букет 1</p>
+                </div>
+                <div class="element bottom-element">
+                    <p class="product-name">Букет 2</p>
+                </div>
+            </div>
+            <div class="bouquet__column">
+                <div class="element top-element">
+                    <p class="product-name">Букет 3</p>
+                </div>
+                <div class="element bottom-element">
+                    <p class="product-name">Букет 4</p>
+                </div>
+            </div>
+            <div class="bouquet__column">
+                <div class="element top-element">
+                    <p class="product-name">Букет 5</p>
+                </div>
+                <div class="element bottom-element">
+                    <p class="product-name">Букет 6</p>
+                </div>
+            </div>
+            <div class="bouquet__column">
+                <div class="element top-element">
+                    <p class="product-name">Букет 7</p>
+                </div>
+                <div class="element bottom-element">
+                    <p class="product-name">Букет 8</p>
+                </div>
+            </div>
+            <div class="bouquet__column">
+                <div class="element top-element">
+                    <p class="product-name">Букет 9</p>
+                </div>
+                <div class="element bottom-element">
+                    <p class="product-name">Букет 10</p>
+                </div>
+            </div>
+        </div>
+        <input type="button" class="button" value="Смотреть ещё">
+    </div>
+</div>
+<div class="bouquet">
+    <div class="title_big title_big_boquet">
+        Цветы в коробке
+    </div>
+    <div class="desc_ltl">
+        подберем все со вкусом
+    </div>
+    <div class="main-bouquet-wrap">
+        <div class="bouquet-wrap">
+            <div class="bouquet__column">
+                <div class="element top-element">
+                    <p class="product-name">Букет 1</p>
+                </div>
+                <div class="element bottom-element">
+                    <p class="product-name">Букет 2</p>
+                </div>
+            </div>
+            <div class="bouquet__column">
+                <div class="element top-element">
+                    <p class="product-name">Букет 3</p>
+                </div>
+                <div class="element bottom-element">
+                    <p class="product-name">Букет 4</p>
+                </div>
+            </div>
+            <div class="bouquet__column">
+                <div class="element top-element">
+                    <p class="product-name">Букет 5</p>
+                </div>
+                <div class="element bottom-element">
+                    <p class="product-name">Букет 6</p>
+                </div>
+            </div>
+            <div class="bouquet__column">
+                <div class="element top-element">
+                    <p class="product-name">Букет 7</p>
+                </div>
+                <div class="element bottom-element">
+                    <p class="product-name">Букет 8</p>
+                </div>
+            </div>
+            <div class="bouquet__column">
+                <div class="element top-element">
+                    <p class="product-name">Букет 9</p>
+                </div>
+                <div class="element bottom-element">
+                    <p class="product-name">Букет 10</p>
+                </div>
+            </div>
+        </div>
+        <input type="button" class="button" value="Смотреть ещё">
+    </div>
+</div>
+<footer>
+
+</footer>
 </body>
 </html>
