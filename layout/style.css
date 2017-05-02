@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700&subset=cyrillic');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,900&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300');
 
 /*working styles*/
 
@@ -207,6 +208,7 @@ header {
     padding-bottom: 20px;
     margin-bottom: -225px;
     box-shadow: 3px -2px 100px 0px grey;
+    align-items: center;
 }
 
     .form-picking_title {
@@ -222,6 +224,7 @@ header {
     .form-picking__inputs {
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
 
         .form-picking__inputs_input {
@@ -389,13 +392,77 @@ header {
 }
 
 footer {
-    background-image: url("/");
+    background-image: url("/layout/image/footer-bcg.jpg");
+    background-size: cover;
+}
+
+footer .title_big {
+    text-transform: none;
 }
 
 .footer-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+}
+
+.footer-wrapper .form-picking {
+    position: inherit;
+    top: 0;
+    margin-bottom: 0;
+}
+
+.left-block {
+    padding: 0 10px;
+    color: #fff;
+}
+
+.foot-italic {
+    font-family: "Playfair Display";
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.metro {
+    font-family: Roboto;
+    font-size: 22px;
+}
+
+.metro:before {
+    content: url("/layout/image/metro.png");
+    position: relative;
+    top: 3px;
+    padding-right: 15px;
+}
+
+.adress {
+    font-family: Roboto;
+    font-weight: 100;
+    font-size: 12px;
+    padding-left: 38px;
+}
+
+.left-block .top-phone {
+    left: 17px;
+    margin-bottom: 30px;
+}
+
+.bottom-footer {
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+    font-size: 12px;
+}
+
+.bottom-footer div {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.bottom-footer div a {
+    padding-left: 15px;
 }
 
 /*tmp styles*/
