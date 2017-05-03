@@ -1,4 +1,5 @@
 <footer>
+    <div class="example-classname"></div>
     <div class="wrapper footer-wrapper">
         <div class="left-block">
             <div class="title_big title_big_w">

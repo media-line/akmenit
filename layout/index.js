@@ -27,3 +27,16 @@ function Collap(num) {
 
     console.log(count);
 }
+
+
+$(document).ready(function(){
+     function include(url) {
+     var script = document.createElement('script');
+     script.src = url;
+     document.getElementsByTagName('head')[0].appendChild(script);
+     }
+
+     if( /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {  } else {
+        include("/bitrix/templates/akmenita/js/jquery.scrollify.js");
+     }
+});

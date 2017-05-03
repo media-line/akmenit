@@ -10,8 +10,24 @@
     <script src="/layout/index.js" type="text/javascript"></script>
     <link href="/layout/style.css" rel="stylesheet">
     <link href="/layout/responsive.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+    <!-- scroll page -->
+    <script src="/bitrix/templates/akmenita/js/jquery.scrollify.js" type="text/javascript"></script>
+    <script>
+        $(function () {
+            $.scrollify({
+                section: ".example-classname",
+            });
+        });
+    </script>
+
 </head>
 <body>
+<div class="example-classname"></div>
 <div class="main-top-block">
     <div class="top-block">
         <div class="wrapper">
@@ -40,7 +56,9 @@
         </div>
         <input class="button" type="button" value="Подобрать букет">
     </div>
+
     <div class="bottom-block wrapper">
+        <div class="example-classname"></div>
         <p class="title_big">Почему стоит заказать у нас?</p>
         <div class="advantages">
             <div class="advantages_row">
@@ -54,7 +72,8 @@
                 </div>
                 <div class="advantage">
                     <img src="/layout/image/advantages/assortiment.png" alt="Разнообразный ассортимент"/>
-                    <p class="description">В наличии разнообразный ассортимент - подберем именно то, что вам нужно</p>
+                    <p class="description">В наличии разнообразный ассортимент - подберем именно то, что вам
+                        нужно</p>
                 </div>
             </div>
             <div class="advantages_row">
@@ -75,6 +94,7 @@
     </div>
 </div>
 <div class="like-bouquet">
+    <div class="example-classname"></div>
     <div class="wrapper_narrow">
         <div class="title_big title_big_w">
             Нравится букет?
@@ -89,6 +109,7 @@
     </div>
 </div>
 <div class="bouquet">
+    <div class="example-classname"></div>
     <div class="title_big title_big_boquet">
         Букеты из роз
     </div>
@@ -142,6 +163,7 @@
     </div>
 </div>
 <div class="bouquet">
+    <div class="example-classname"></div>
     <div class="title_big title_big_boquet">
         Миксовые букеты
     </div>
@@ -195,6 +217,7 @@
     </div>
 </div>
 <div class="bouquet">
+    <div class="example-classname"></div>
     <div class="title_big title_big_boquet">
         Цветы в коробке
     </div>
@@ -248,6 +271,7 @@
     </div>
 </div>
 <footer>
+    <div class="example-classname"></div>
     <div class="wrapper footer-wrapper">
         <div class="left-block">
             <div class="title_big title_big_w">
@@ -276,7 +300,8 @@
     </div>
     <div class="wrapper bottom-footer">
         <div>&#169; 2017, Акменита</div>
-        <div>Разработка сайта<a href="http://www.medialine.by" target="_blank" class="copiright"><img src="/image/copiright.png" /></a></div>
+        <div>Разработка сайта<a href="http://www.medialine.by" target="_blank" class="copiright"><img
+                        src="/image/copiright.png"/></a></div>
     </div>
 </footer>
 </body>

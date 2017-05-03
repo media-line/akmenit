@@ -1,24 +1,31 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 IncludeTemplateLangFile(__FILE__);
 ?>
-    <html>
-    <head>
-        <?$APPLICATION->ShowHead();?>
-        <title><?$APPLICATION->ShowTitle()?></title>
+<html>
+<head>
+    <? $APPLICATION->ShowHead(); ?>
+    <title><? $APPLICATION->ShowTitle() ?></title>
+    <meta name="viewport" content="width=device-width">
 
-        <script src="/layout/index.js" type="text/javascript"></script>
-        <link href="/layout/style.css" rel="stylesheet">
-        <link href="/layout/responsive.css" rel="stylesheet">
-    </head>
+    <!-- jQuery -->
+   <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+           integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+           crossorigin="anonymous">
+   </script>
+
+    <script src="/layout/index.js" type="text/javascript"></script>
+    <link href="/layout/style.css" rel="stylesheet">
+    <link href="/layout/responsive.css" rel="stylesheet">
+</head>
 
 <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" bgcolor="#FFFFFF">
 
-<?$APPLICATION->ShowPanel()?>
+<? $APPLICATION->ShowPanel() ?>
 
-<?if($USER->IsAdmin()):?>
+<? if ($USER->IsAdmin()): ?>
 
-<?endif?>
-
+<? endif ?>
+<div class="example-classname"></div>
 <div class="main-top-block">
     <div class="top-block">
         <div class="wrapper">
@@ -48,6 +55,7 @@ IncludeTemplateLangFile(__FILE__);
         <input class="button" type="button" value="Подобрать букет">
     </div>
     <div class="bottom-block wrapper">
+        <div class="example-classname"></div>
         <p class="title_big">Почему стоит заказать у нас?</p>
         <div class="advantages">
             <div class="advantages_row">
@@ -83,6 +91,7 @@ IncludeTemplateLangFile(__FILE__);
 </div>
 <div class="like-bouquet">
     <div class="wrapper_narrow">
+        <div class="example-classname"></div>
         <div class="title_big title_big_w">
             Нравится букет?
         </div>
@@ -97,6 +106,7 @@ IncludeTemplateLangFile(__FILE__);
 </div>
 <div class="bouquet">
     <div class="title_big title_big_boquet">
+        <div class="example-classname"></div>
         Букеты из роз
     </div>
     <div class="desc_ltl">
@@ -150,6 +160,7 @@ IncludeTemplateLangFile(__FILE__);
 </div>
 <div class="bouquet">
     <div class="title_big title_big_boquet">
+        <div class="example-classname"></div>
         Миксовые букеты
     </div>
     <div class="desc_ltl">
@@ -203,6 +214,7 @@ IncludeTemplateLangFile(__FILE__);
 </div>
 <div class="bouquet">
     <div class="title_big title_big_boquet">
+        <div class="example-classname"></div>
         Цветы в коробке
     </div>
     <div class="desc_ltl">

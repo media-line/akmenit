@@ -112,6 +112,11 @@
     padding-bottom: 35px;
 }
 
+    .form-picking {
+        top: -20px;
+        margin-bottom: -20px;
+    }
+
 }
 
 @media all and (min-width: 800px) {
@@ -195,13 +200,13 @@ footer .title_big:after, footer .title_big:before {
 
 @media all and (min-width: 1024px) {
     .title:before {
-        margin-top: 40px;
-        margin-bottom: 50px;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     .title_second-row {
         margin-top: 3px;
-        margin-bottom: 40px;
+        margin-bottom: 10px;
     }
 
     .bouquet__column:nth-child(1) .top-element, .bouquet__column:nth-child(4) .top-element, .bouquet__column:nth-child(2) .bottom-element, .bouquet__column:nth-child(3) .bottom-element, .bouquet__column:nth-child(5) .bottom-element {
@@ -233,6 +238,16 @@ footer .title_big {
     margin-right: 4px;
 }
 
+.form-picking {
+    top: -200px;
+    margin-bottom: -200px;
+    padding-bottom: 23px;
+}
+
+.form-picking_title {
+    font-size: 28px;
+}
+
 }
 
 @media all and (min-width: 1170px) {
@@ -256,15 +271,21 @@ footer .title_big {
     .advantages_row {
         display: flex;
         flex-direction: row;
-        margin-top: 35px;
+        margin-top: 0px;
     }
 
     .description {
         padding: 0 10%;
+        font-size: 17px;
     }
 
     .advantage {
         width: 33.3%;
+        min-height: 290px;
+    }
+
+    .advantage img {
+        height: 190px;
     }
 
     .form-picking {

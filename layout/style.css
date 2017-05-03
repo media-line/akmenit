@@ -197,17 +197,17 @@ header {
         }
 
 .form-picking {
-    background-color: #fff;
-    border: 6px solid #cbaa5e;
+    background-color: rgb(255, 255, 255);
+    border: 6px solid rgb(203, 170, 94);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     padding: 0 20px;
     position: relative;
-    top: -265px;
+    top: -5px;
     padding-bottom: 20px;
-    margin-bottom: -225px;
-    box-shadow: 3px -2px 100px 0px grey;
+    margin-bottom: -5px;
+    box-shadow: 3px -2px 100px 0px rgb(128, 128, 128);
     align-items: center;
 }
 
@@ -463,6 +463,11 @@ footer .title_big {
 
 .bottom-footer div a {
     padding-left: 15px;
+}
+
+.example-classname {
+    position: absolute;
+    height: 0 !important;
 }
 
 /*tmp styles*/
