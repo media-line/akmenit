@@ -13,7 +13,7 @@ IncludeTemplateLangFile(__FILE__);
            crossorigin="anonymous">
    </script>
 
-    <script src="/layout/index.js" type="text/javascript"></script>
+    <!--<script src="/layout/index.js" type="text/javascript"></script>-->
     <link href="/layout/style.css" rel="stylesheet">
     <link href="/layout/responsive.css" rel="stylesheet">
 </head>
@@ -117,15 +117,14 @@ IncludeTemplateLangFile(__FILE__);
 		"IBLOCK_TYPE" => "bouquets",
 		"IBLOCK_ID" => "1",
 		"NEWS_COUNT" => "10",
-		"SORT_BY1" => "ACTIVE_FROM",
-		"SORT_ORDER1" => "DESC",
+		"SORT_BY1" => "SORT",
+		"SORT_ORDER1" => "ASC",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER2" => "ASC",
 		"FILTER_NAME" => "",
 		"FIELD_CODE" => array(
-			0 => "",
-			1 => "DETAIL_PICTURE",
-			2 => "",
+			0 => "DETAIL_PICTURE",
+			1 => "",
 		),
 		"PROPERTY_CODE" => array(
 			0 => "",
@@ -175,60 +174,6 @@ IncludeTemplateLangFile(__FILE__);
 	false
 );?>
 
-<div class="bouquet">
-    <div class="title_big title_big_boquet">
-        <div class="example-classname"></div>
-        Букеты из роз
-    </div>
-    <div class="desc_ltl">
-        Доставим сегодня
-    </div>
-    <div class="main-bouquet-wrap">
-        <div class="bouquet-wrap">
-            <div class="bouquet__column">
-                <div class="element top-element">
-                    <p class="product-name">Букет 1</p>
-                </div>
-                <div class="element bottom-element">
-                    <p class="product-name">Букет 2</p>
-                </div>
-            </div>
-            <div class="bouquet__column">
-                <div class="element top-element">
-                    <p class="product-name">Букет 3</p>
-                </div>
-                <div class="element bottom-element">
-                    <p class="product-name">Букет 4</p>
-                </div>
-            </div>
-            <div class="bouquet__column">
-                <div class="element top-element">
-                    <p class="product-name">Букет 5</p>
-                </div>
-                <div class="element bottom-element">
-                    <p class="product-name">Букет 6</p>
-                </div>
-            </div>
-            <div class="bouquet__column">
-                <div class="element top-element">
-                    <p class="product-name">Букет 7</p>
-                </div>
-                <div class="element bottom-element">
-                    <p class="product-name">Букет 8</p>
-                </div>
-            </div>
-            <div class="bouquet__column">
-                <div class="element top-element">
-                    <p class="product-name">Букет 9</p>
-                </div>
-                <div class="element bottom-element">
-                    <p class="product-name">Букет 10</p>
-                </div>
-            </div>
-        </div>
-        <input type="button" class="button" value="Смотреть ещё" onclick="Collap(0)">
-    </div>
-</div>
 <div class="bouquet">
     <div class="title_big title_big_boquet">
         <div class="example-classname"></div>

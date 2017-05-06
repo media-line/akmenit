@@ -1,56 +1,56 @@
-<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
-/** @var array $arParams */
-/** @var array $arResult */
-/** @global CMain $APPLICATION */
-/** @global CUser $USER */
-/** @global CDatabase $DB */
-/** @var CBitrixComponentTemplate $this */
-/** @var string $templateName */
-/** @var string $templateFile */
-/** @var string $templateFolder */
-/** @var string $componentPath */
-/** @var CBitrixComponent $component */
-$this->setFrameMode(true);
-?>
+<div class="bouquet">
+    <div class="title_big title_big_boquet">
+        <div class="example-classname"></div>
+        <?php echo $arResult["NAME"] ?>
+    </div>
+    <div class="desc_ltl">
+        доставим сегодня
+    </div>
+    <div class="main-bouquet-wrap">
+        <div class="bouquet-wrap">
+            <?php
+            $arrLength = count($arResult["ITEMS"]);
 
-
-
-<? foreach ($arResult["ITEMS"] as $arItem): ?>
-
-    <!-- первое фото -->
-    <? if ($arParams["DISPLAY_PICTURE"] != "N" && is_array($arItem["PREVIEW_PICTURE"])): ?>
-        <img
-                class="preview_picture"
-                border="0"
-                src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>"
-                width="<?= $arItem["PREVIEW_PICTURE"]["WIDTH"] ?>"
-                height="<?= $arItem["PREVIEW_PICTURE"]["HEIGHT"] ?>"
-                alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>"
-                title="<?= $arItem["PREVIEW_PICTURE"]["TITLE"] ?>"
-        />
-    <? endif ?>
-    <!-- /первое фото -->
-
-    <!-- второе фото -->
-    <? if ($arParams["DISPLAY_PICTURE"] != "N" && is_array($arItem["DETAIL_PICTURE"])): ?>
-        <img
-                class="preview_picture"
-                border="0"
-                src="<?= $arItem["DETAIL_PICTURE"]["SRC"] ?>"
-                width="<?= $arItem["DETAIL_PICTURE"]["WIDTH"] ?>"
-                height="<?= $arItem["DETAIL_PICTURE"]["HEIGHT"] ?>"
-                alt="<?= $arItem["DETAIL_PICTURE"]["ALT"] ?>"
-                title="<?= $arItem["DETAIL_PICTURE"]["TITLE"] ?>"
-        />
-    <? endif ?>
-    <!-- /второе фото -->
-
-    <!-- название букета -->
-    <? if ($arParams["DISPLAY_NAME"] != "N" && $arItem["NAME"]): ?>
-        <? echo $arItem["NAME"] ?>
-    <? endif; ?>
-    <!-- /название букета -->
-
-<? endforeach; ?>
-
-
+            foreach ($arResult["ITEMS"] as $key => $arItem) {
+                $n = 0;
+                ?>
+                <div class="bouquet__column">
+                    <div class="element top-element">
+                        <img
+                                class="preview_picture"
+                                border="0"
+                                src="<?= $arResult["ITEMS"][$key + $n]["PREVIEW_PICTURE"]["SRC"] ?>"
+                                width="<?= $arResult["ITEMS"][$key + $n]["PREVIEW_PICTURE"]["WIDTH"] ?>"
+                                height="<?= $arResult["ITEMS"][$key + $n]["PREVIEW_PICTURE"]["HEIGHT"] ?>"
+                                alt="<?= $arResult["ITEMS"][$key + $n]["PREVIEW_PICTURE"]["ALT"] ?>"
+                                title="<?= $arResult["ITEMS"][$key + $n]["PREVIEW_PICTURE"]["TITLE"] ?>"
+                        />
+                        <p class="product-name">
+                            <?php echo $arResult["ITEMS"][$key + $n]["NAME"]; ?>
+                        </p>
+                    </div>
+                    <?php
+                    $n = $n + 1;
+                    ?>
+                    <div class="element bottom-element">
+                        <img
+                                class="preview_picture"
+                                border="0"
+                                src="<?= $arResult["ITEMS"][$key + $n]["PREVIEW_PICTURE"]["SRC"] ?>"
+                                width="<?= $arResult["ITEMS"][$key + $n]["PREVIEW_PICTURE"]["WIDTH"] ?>"
+                                height="<?= $arResult["ITEMS"][$key + $n]["PREVIEW_PICTURE"]["HEIGHT"] ?>"
+                                alt="<?= $arResult["ITEMS"][$key + $n]["PREVIEW_PICTURE"]["ALT"] ?>"
+                                title="<?= $arResult["ITEMS"][$key + $n]["PREVIEW_PICTURE"]["TITLE"] ?>"
+                        />
+                        <p class="product-name">
+                            <?php echo $arResult["ITEMS"][$key + $n]["NAME"];
+                            if ($key == 10) {return;}
+                            ?>
+                        </p>
+                    </div>
+                </div>
+                <?php } ?>
+        </div>
+        <input type="button" class="button" value="Смотреть ещё" onclick="Collap(1)">
+    </div>
+</div>
