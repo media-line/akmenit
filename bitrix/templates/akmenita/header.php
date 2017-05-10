@@ -8,12 +8,12 @@ IncludeTemplateLangFile(__FILE__);
     <meta name="viewport" content="width=device-width">
 
     <!-- jQuery -->
-   <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-           integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-           crossorigin="anonymous">
-   </script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous">
+    </script>
 
-    <!--<script src="/layout/index.js" type="text/javascript"></script>-->
+    <script src="/layout/index.js" type="text/javascript"></script>
     <link href="/layout/style.css" rel="stylesheet">
     <link href="/layout/responsive.css" rel="stylesheet">
 </head>
@@ -32,7 +32,7 @@ IncludeTemplateLangFile(__FILE__);
             <header>
                 <div class="top-phone">
                     <a class="top-phone__top" href="tel:+375292693999">+375 (29) 269-39-99</a>
-                    <p class="top-phone__bottom">Перезвонить вам?</p>
+                    <p onclick="showPopup();" class="top-phone__bottom">Перезвонить вам?</p>
                 </div>
             </header>
             <div class="wrapper_narrow center-column">
@@ -105,180 +105,224 @@ IncludeTemplateLangFile(__FILE__);
     </div>
 </div>
 
-<?$APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"bouquet", 
-	array(
-		"DISPLAY_DATE" => "N",
-		"DISPLAY_NAME" => "Y",
-		"DISPLAY_PICTURE" => "Y",
-		"DISPLAY_PREVIEW_TEXT" => "N",
-		"AJAX_MODE" => "Y",
-		"IBLOCK_TYPE" => "bouquets",
-		"IBLOCK_ID" => "1",
-		"NEWS_COUNT" => "10",
-		"SORT_BY1" => "SORT",
-		"SORT_ORDER1" => "ASC",
-		"SORT_BY2" => "SORT",
-		"SORT_ORDER2" => "ASC",
-		"FILTER_NAME" => "",
-		"FIELD_CODE" => array(
-			0 => "DETAIL_PICTURE",
-			1 => "",
-		),
-		"PROPERTY_CODE" => array(
-			0 => "",
-			1 => "DESCRIPTION",
-			2 => "",
-		),
-		"CHECK_DATES" => "Y",
-		"DETAIL_URL" => "",
-		"PREVIEW_TRUNCATE_LEN" => "",
-		"ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"SET_TITLE" => "N",
-		"SET_BROWSER_TITLE" => "N",
-		"SET_META_KEYWORDS" => "N",
-		"SET_META_DESCRIPTION" => "N",
-		"SET_LAST_MODIFIED" => "N",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
-		"ADD_SECTIONS_CHAIN" => "N",
-		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"PARENT_SECTION" => "",
-		"PARENT_SECTION_CODE" => "",
-		"INCLUDE_SUBSECTIONS" => "N",
-		"CACHE_TYPE" => "A",
-		"CACHE_TIME" => "3600",
-		"CACHE_FILTER" => "Y",
-		"CACHE_GROUPS" => "Y",
-		"DISPLAY_TOP_PAGER" => "N",
-		"DISPLAY_BOTTOM_PAGER" => "N",
-		"PAGER_TITLE" => "Букеты",
-		"PAGER_SHOW_ALWAYS" => "N",
-		"PAGER_TEMPLATE" => "",
-		"PAGER_DESC_NUMBERING" => "N",
-		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-		"PAGER_SHOW_ALL" => "N",
-		"PAGER_BASE_LINK_ENABLE" => "N",
-		"SET_STATUS_404" => "Y",
-		"SHOW_404" => "Y",
-		"MESSAGE_404" => "",
-		"PAGER_BASE_LINK" => "",
-		"PAGER_PARAMS_NAME" => "arrPager",
-		"AJAX_OPTION_JUMP" => "N",
-		"AJAX_OPTION_STYLE" => "Y",
-		"AJAX_OPTION_HISTORY" => "N",
-		"AJAX_OPTION_ADDITIONAL" => "",
-		"COMPONENT_TEMPLATE" => "bouquet",
-		"FILE_404" => ""
-	),
-	false
-);?>
+<? $APPLICATION->IncludeComponent(
+    "bitrix:news.list",
+    "bouquet",
+    array(
+        "DISPLAY_DATE" => "N",
+        "DISPLAY_NAME" => "Y",
+        "DISPLAY_PICTURE" => "Y",
+        "DISPLAY_PREVIEW_TEXT" => "N",
+        "AJAX_MODE" => "Y",
+        "IBLOCK_TYPE" => "bouquets",
+        "IBLOCK_ID" => "1",
+        "NEWS_COUNT" => "10",
+        "SORT_BY1" => "SORT",
+        "SORT_ORDER1" => "ASC",
+        "SORT_BY2" => "SORT",
+        "SORT_ORDER2" => "ASC",
+        "FILTER_NAME" => "",
+        "FIELD_CODE" => array(
+            0 => "DETAIL_PICTURE",
+            1 => "",
+        ),
+        "PROPERTY_CODE" => array(
+            0 => "",
+            1 => "DESCRIPTION",
+            2 => "",
+        ),
+        "CHECK_DATES" => "Y",
+        "DETAIL_URL" => "",
+        "PREVIEW_TRUNCATE_LEN" => "",
+        "ACTIVE_DATE_FORMAT" => "d.m.Y",
+        "SET_TITLE" => "N",
+        "SET_BROWSER_TITLE" => "N",
+        "SET_META_KEYWORDS" => "N",
+        "SET_META_DESCRIPTION" => "N",
+        "SET_LAST_MODIFIED" => "N",
+        "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+        "ADD_SECTIONS_CHAIN" => "N",
+        "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+        "PARENT_SECTION" => "",
+        "PARENT_SECTION_CODE" => "",
+        "INCLUDE_SUBSECTIONS" => "N",
+        "CACHE_TYPE" => "A",
+        "CACHE_TIME" => "3600",
+        "CACHE_FILTER" => "Y",
+        "CACHE_GROUPS" => "Y",
+        "DISPLAY_TOP_PAGER" => "N",
+        "DISPLAY_BOTTOM_PAGER" => "N",
+        "PAGER_TITLE" => "Букеты",
+        "PAGER_SHOW_ALWAYS" => "N",
+        "PAGER_TEMPLATE" => "",
+        "PAGER_DESC_NUMBERING" => "N",
+        "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+        "PAGER_SHOW_ALL" => "N",
+        "PAGER_BASE_LINK_ENABLE" => "N",
+        "SET_STATUS_404" => "Y",
+        "SHOW_404" => "Y",
+        "MESSAGE_404" => "",
+        "PAGER_BASE_LINK" => "",
+        "PAGER_PARAMS_NAME" => "arrPager",
+        "AJAX_OPTION_JUMP" => "N",
+        "AJAX_OPTION_STYLE" => "Y",
+        "AJAX_OPTION_HISTORY" => "N",
+        "AJAX_OPTION_ADDITIONAL" => "",
+        "COMPONENT_TEMPLATE" => "bouquet",
+        "FILE_404" => ""
+    ),
+    false
+); ?>
 
-<div class="bouquet">
-    <div class="title_big title_big_boquet">
-        <div class="example-classname"></div>
-        Миксовые букеты
-    </div>
-    <div class="desc_ltl">
-        сделаем к нужному дню
-    </div>
-    <div class="main-bouquet-wrap">
-        <div class="bouquet-wrap">
-            <div class="bouquet__column">
-                <div class="element top-element">
-                    <p class="product-name">Букет 1</p>
-                </div>
-                <div class="element bottom-element">
-                    <p class="product-name">Букет 2</p>
-                </div>
+<? $APPLICATION->IncludeComponent(
+    "bitrix:news.list",
+    "bouquet",
+    array(
+        "DISPLAY_DATE" => "N",
+        "DISPLAY_NAME" => "Y",
+        "DISPLAY_PICTURE" => "Y",
+        "DISPLAY_PREVIEW_TEXT" => "N",
+        "AJAX_MODE" => "Y",
+        "IBLOCK_TYPE" => "bouquets",
+        "IBLOCK_ID" => "2",
+        "NEWS_COUNT" => "10",
+        "SORT_BY1" => "SORT",
+        "SORT_ORDER1" => "ASC",
+        "SORT_BY2" => "SORT",
+        "SORT_ORDER2" => "ASC",
+        "FILTER_NAME" => "",
+        "FIELD_CODE" => array(
+            0 => "DETAIL_PICTURE",
+            1 => "",
+        ),
+        "PROPERTY_CODE" => array(
+            0 => "",
+            1 => "DESCRIPTION",
+            2 => "",
+        ),
+        "CHECK_DATES" => "Y",
+        "DETAIL_URL" => "",
+        "PREVIEW_TRUNCATE_LEN" => "",
+        "ACTIVE_DATE_FORMAT" => "d.m.Y",
+        "SET_TITLE" => "N",
+        "SET_BROWSER_TITLE" => "N",
+        "SET_META_KEYWORDS" => "N",
+        "SET_META_DESCRIPTION" => "N",
+        "SET_LAST_MODIFIED" => "N",
+        "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+        "ADD_SECTIONS_CHAIN" => "N",
+        "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+        "PARENT_SECTION" => "",
+        "PARENT_SECTION_CODE" => "",
+        "INCLUDE_SUBSECTIONS" => "N",
+        "CACHE_TYPE" => "A",
+        "CACHE_TIME" => "3600",
+        "CACHE_FILTER" => "Y",
+        "CACHE_GROUPS" => "Y",
+        "DISPLAY_TOP_PAGER" => "N",
+        "DISPLAY_BOTTOM_PAGER" => "N",
+        "PAGER_TITLE" => "Букеты",
+        "PAGER_SHOW_ALWAYS" => "N",
+        "PAGER_TEMPLATE" => "",
+        "PAGER_DESC_NUMBERING" => "N",
+        "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+        "PAGER_SHOW_ALL" => "N",
+        "PAGER_BASE_LINK_ENABLE" => "N",
+        "SET_STATUS_404" => "Y",
+        "SHOW_404" => "Y",
+        "MESSAGE_404" => "",
+        "PAGER_BASE_LINK" => "",
+        "PAGER_PARAMS_NAME" => "arrPager",
+        "AJAX_OPTION_JUMP" => "N",
+        "AJAX_OPTION_STYLE" => "Y",
+        "AJAX_OPTION_HISTORY" => "N",
+        "AJAX_OPTION_ADDITIONAL" => "",
+        "COMPONENT_TEMPLATE" => "bouquet",
+        "FILE_404" => ""
+    ),
+    false
+); ?>
+
+<? $APPLICATION->IncludeComponent(
+    "bitrix:news.list",
+    "bouquet",
+    array(
+        "DISPLAY_DATE" => "N",
+        "DISPLAY_NAME" => "Y",
+        "DISPLAY_PICTURE" => "Y",
+        "DISPLAY_PREVIEW_TEXT" => "N",
+        "AJAX_MODE" => "Y",
+        "IBLOCK_TYPE" => "bouquets",
+        "IBLOCK_ID" => "4",
+        "NEWS_COUNT" => "10",
+        "SORT_BY1" => "SORT",
+        "SORT_ORDER1" => "ASC",
+        "SORT_BY2" => "SORT",
+        "SORT_ORDER2" => "ASC",
+        "FILTER_NAME" => "",
+        "FIELD_CODE" => array(
+            0 => "DETAIL_PICTURE",
+            1 => "",
+        ),
+        "PROPERTY_CODE" => array(
+            0 => "",
+            1 => "DESCRIPTION",
+            2 => "",
+        ),
+        "CHECK_DATES" => "Y",
+        "DETAIL_URL" => "",
+        "PREVIEW_TRUNCATE_LEN" => "",
+        "ACTIVE_DATE_FORMAT" => "d.m.Y",
+        "SET_TITLE" => "N",
+        "SET_BROWSER_TITLE" => "N",
+        "SET_META_KEYWORDS" => "N",
+        "SET_META_DESCRIPTION" => "N",
+        "SET_LAST_MODIFIED" => "N",
+        "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+        "ADD_SECTIONS_CHAIN" => "N",
+        "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+        "PARENT_SECTION" => "",
+        "PARENT_SECTION_CODE" => "",
+        "INCLUDE_SUBSECTIONS" => "N",
+        "CACHE_TYPE" => "A",
+        "CACHE_TIME" => "3600",
+        "CACHE_FILTER" => "Y",
+        "CACHE_GROUPS" => "Y",
+        "DISPLAY_TOP_PAGER" => "N",
+        "DISPLAY_BOTTOM_PAGER" => "N",
+        "PAGER_TITLE" => "Букеты",
+        "PAGER_SHOW_ALWAYS" => "N",
+        "PAGER_TEMPLATE" => "",
+        "PAGER_DESC_NUMBERING" => "N",
+        "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+        "PAGER_SHOW_ALL" => "N",
+        "PAGER_BASE_LINK_ENABLE" => "N",
+        "SET_STATUS_404" => "Y",
+        "SHOW_404" => "Y",
+        "MESSAGE_404" => "",
+        "PAGER_BASE_LINK" => "",
+        "PAGER_PARAMS_NAME" => "arrPager",
+        "AJAX_OPTION_JUMP" => "N",
+        "AJAX_OPTION_STYLE" => "Y",
+        "AJAX_OPTION_HISTORY" => "N",
+        "AJAX_OPTION_ADDITIONAL" => "",
+        "COMPONENT_TEMPLATE" => "bouquet",
+        "FILE_404" => ""
+    ),
+    false
+); ?>
+
+<div class="popup">
+    <div class="popup_bg">
+        <div class="form-picking wrapper_narrow form">
+            <p class="form-picking_title">Поможем подобрать букет к любому событию</p>
+            <div class="form-picking__inputs">
+                <input class="form-picking__inputs_input" type="text" placeholder="Ваше имя" required name="name">
+                <input class="form-picking__inputs_input" type="tel" placeholder="Ваш телефон" required name="phone">
+                <input class="form-picking__inputs_input" type="text" placeholder="Кому дарите?" required name="target">
+                <input class="form-picking__inputs_input" type="number" placeholder="Ваш бюджет" required name="money">
             </div>
-            <div class="bouquet__column">
-                <div class="element top-element">
-                    <p class="product-name">Букет 3</p>
-                </div>
-                <div class="element bottom-element">
-                    <p class="product-name">Букет 4</p>
-                </div>
-            </div>
-            <div class="bouquet__column">
-                <div class="element top-element">
-                    <p class="product-name">Букет 5</p>
-                </div>
-                <div class="element bottom-element">
-                    <p class="product-name">Букет 6</p>
-                </div>
-            </div>
-            <div class="bouquet__column">
-                <div class="element top-element">
-                    <p class="product-name">Букет 7</p>
-                </div>
-                <div class="element bottom-element">
-                    <p class="product-name">Букет 8</p>
-                </div>
-            </div>
-            <div class="bouquet__column">
-                <div class="element top-element">
-                    <p class="product-name">Букет 9</p>
-                </div>
-                <div class="element bottom-element">
-                    <p class="product-name">Букет 10</p>
-                </div>
-            </div>
+            <input class="button" type="button" value="Подобрать букет">
         </div>
-        <input type="button" class="button" value="Смотреть ещё" onclick="Collap(1)">
-    </div>
-</div>
-<div class="bouquet">
-    <div class="title_big title_big_boquet">
-        <div class="example-classname"></div>
-        Цветы в коробке
-    </div>
-    <div class="desc_ltl">
-        подберем все со вкусом
-    </div>
-    <div class="main-bouquet-wrap">
-        <div class="bouquet-wrap">
-            <div class="bouquet__column">
-                <div class="element top-element">
-                    <p class="product-name">Букет 1</p>
-                </div>
-                <div class="element bottom-element">
-                    <p class="product-name">Букет 2</p>
-                </div>
-            </div>
-            <div class="bouquet__column">
-                <div class="element top-element">
-                    <p class="product-name">Букет 3</p>
-                </div>
-                <div class="element bottom-element">
-                    <p class="product-name">Букет 4</p>
-                </div>
-            </div>
-            <div class="bouquet__column">
-                <div class="element top-element">
-                    <p class="product-name">Букет 5</p>
-                </div>
-                <div class="element bottom-element">
-                    <p class="product-name">Букет 6</p>
-                </div>
-            </div>
-            <div class="bouquet__column">
-                <div class="element top-element">
-                    <p class="product-name">Букет 7</p>
-                </div>
-                <div class="element bottom-element">
-                    <p class="product-name">Букет 8</p>
-                </div>
-            </div>
-            <div class="bouquet__column">
-                <div class="element top-element">
-                    <p class="product-name">Букет 9</p>
-                </div>
-                <div class="element bottom-element">
-                    <p class="product-name">Букет 10</p>
-                </div>
-            </div>
-        </div>
-        <input type="button" class="button" value="Смотреть ещё" onclick="Collap(2)">
     </div>
 </div>

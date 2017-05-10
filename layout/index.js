@@ -5,14 +5,14 @@ function Collap(num) {
 
     var arr = Array();
 
-    for (var r=0; r < 5; r++) {
+    for (var r = 0; r < 5; r++) {
         var style = getComputedStyle(targ[r]);
         arr.push(style.display);
     }
 
     var count = 0;
 
-    for (var r=0; r < arr.length; r++) {
+    for (var r = 0; r < arr.length; r++) {
         if (arr[r] == 'block') {
             count++;
             if (count == 4) {
@@ -28,15 +28,26 @@ function Collap(num) {
     console.log(count);
 }
 
+function showPopup() {
+    $(".popup").fadeIn(800);
 
-$(document).ready(function(){
-     function include(url) {
-     var script = document.createElement('script');
-     script.src = url;
-     document.getElementsByTagName('head')[0].appendChild(script);
-     }
+}
 
-     if( /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {  } else {
+$(document).ready(function () {
+    function include(url) {
+        var script = document.createElement('script');
+        script.src = url;
+        document.getElementsByTagName('head')[0].appendChild(script);
+    }
+
+    if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    } else {
         include("/bitrix/templates/akmenita/js/jquery.scrollify.js");
-     }
+    }
+
+    $("body").click(function (event) {
+        if (($(event.target).closest(".form").length === 0) && ($(event.target).closest(".top-phone__bottom").length === 0)) {
+            $(".popup").fadeOut(800);
+        }
+    });
 });
