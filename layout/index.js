@@ -29,8 +29,24 @@ function Collap(num) {
 }
 
 function showPopup() {
-    $(".popup").fadeIn(800);
+    $(".popupform").fadeIn(800);
 
+}
+
+function showPopupDown() {
+    $(".popupdownload").fadeIn(800);
+}
+
+function getName (str){
+    if (str.lastIndexOf('\\')){
+        var i = str.lastIndexOf('\\')+1;
+    }
+    else{
+        var i = str.lastIndexOf('/')+1;
+    }
+    var filename = str.slice(i);
+    var uploaded = document.getElementById("fileformlabel");
+    uploaded.innerHTML = filename;
 }
 
 $(document).ready(function () {
@@ -45,9 +61,13 @@ $(document).ready(function () {
         include("/bitrix/templates/akmenita/js/jquery.scrollify.js");
     }
 
-    $("body").click(function (event) {
-        if (($(event.target).closest(".form").length === 0) && ($(event.target).closest(".top-phone__bottom").length === 0)) {
-            $(".popup").fadeOut(800);
+    $(document).mouseup(function (e){ // событие клика по веб-документу
+        var div = $(".form"); // тут указываем ID элемента
+        var hidden = $(".popup");
+
+        if (!div.is(e.target) // если клик был не по нашему блоку
+            && div.has(e.target).length === 0) { // и не по его дочерним элементам
+            hidden.fadeOut(800); // скрываем его
         }
     });
 });

@@ -505,9 +505,100 @@ footer .title_big {
     width: 100%;
 }
 
-.form {
+.popup_message {
+    display: block;
+}
+
+.popup .form {
     position: relative;
     margin: 380px auto;
     z-index: 50;
     box-shadow: 0 0 2px rgba(0,0,0,0.7);
+}
+
+.popup_message_inside {
+    display: flex;
+    position: relative;
+    top: 100px;
+    left: 0;
+    z-index: 50;
+    width: 20%;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    border: 6px rgb(203, 170, 94) solid;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.popupdownload .form-picking {
+    top: 135vh;
+}
+
+.popupdownload .form-picking textarea {
+    width: 76%;
+    height: 98px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    resize: none;
+}
+
+.form-picking__buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.fileform {
+    background-color: RGB(255, 255, 255);
+    border: 1px solid RGB(204, 204, 204);
+    border-radius: 25px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    vertical-align: middle;
+    width: 230px;
+}
+
+.fileform .selectbutton {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    position: relative;
+    left: -15px;
+    color: rgb(194, 194, 193);
+    text-transform: uppercase;
+    font-family: Roboto;
+}
+
+.fileform .selectbutton span {
+    color: #c4a04d;
+}
+
+.fileform #upload{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -moz-opacity: 0;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    font-size: 150px;
+    z-index: 20;
+}
+
+.fileform #fileformlabel {
+    background-color: RGB(255, 255, 255);
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    overflow: hidden;
+    padding: 2px;
+    text-align: left;
+    vertical-align: middle;
+    width: 160px;
+    display: none;
 }

@@ -15,16 +15,17 @@
                 <a class="top-phone__top" href="tel:+375292693999">+375 (29) 269-39-99</a>
             </div>
         </div>
-        <div class="form-picking right-block wrapper_narrow">
+        <form action="" class="form-picking wrapper_narrow form" method="post">
             <p class="form-picking_title">Поможем подобрать букет к любому событию</p>
             <div class="form-picking__inputs">
                 <input class="form-picking__inputs_input" type="text" placeholder="Ваше имя" required name="name">
                 <input class="form-picking__inputs_input" type="tel" placeholder="Ваш телефон" required name="phone">
                 <input class="form-picking__inputs_input" type="text" placeholder="Кому дарите?" required name="target">
                 <input class="form-picking__inputs_input" type="number" placeholder="Ваш бюджет" required name="money">
+                <input type="hidden" name="check" value="choose">
             </div>
-            <input class="button" type="button" value="Подобрать букет">
-        </div>
+            <input class="button" type="submit" value="Подобрать букет">
+        </form>
     </div>
     <div class="wrapper bottom-footer">
         <div>&#169; 2017, Акменита</div>

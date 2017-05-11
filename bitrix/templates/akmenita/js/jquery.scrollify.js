@@ -836,5 +836,3 @@ $(function () {
         section: ".example-classname",
     });
 });
-
-console.log('include and choose - work');

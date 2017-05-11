@@ -3,7 +3,9 @@ IncludeTemplateLangFile(__FILE__);
 ?>
 <html>
 <head>
-    <? $APPLICATION->ShowHead(); ?>
+    <? $APPLICATION->ShowHead();
+    include_once("/bitrix/templates/akmenita/php/index.php");
+    ?>
     <title><? $APPLICATION->ShowTitle() ?></title>
     <meta name="viewport" content="width=device-width">
 
@@ -25,7 +27,9 @@ IncludeTemplateLangFile(__FILE__);
 <? if ($USER->IsAdmin()): ?>
 
 <? endif ?>
+
 <div class="example-classname"></div>
+
 <div class="main-top-block">
     <div class="top-block">
         <div class="wrapper">
@@ -44,16 +48,17 @@ IncludeTemplateLangFile(__FILE__);
             </div>
         </div>
     </div>
-    <div class="form-picking wrapper_narrow">
+    <form action="" class="form-picking wrapper_narrow form" method="post">
         <p class="form-picking_title">Поможем подобрать букет к любому событию</p>
         <div class="form-picking__inputs">
             <input class="form-picking__inputs_input" type="text" placeholder="Ваше имя" required name="name">
             <input class="form-picking__inputs_input" type="tel" placeholder="Ваш телефон" required name="phone">
             <input class="form-picking__inputs_input" type="text" placeholder="Кому дарите?" required name="target">
             <input class="form-picking__inputs_input" type="number" placeholder="Ваш бюджет" required name="money">
+            <input type="hidden" name="check" value="choose">
         </div>
-        <input class="button" type="button" value="Подобрать букет">
-    </div>
+        <input class="button" type="submit" value="Подобрать букет">
+    </form>
     <div class="bottom-block wrapper">
         <div class="example-classname"></div>
         <p class="title_big">Почему стоит заказать у нас?</p>
@@ -89,6 +94,7 @@ IncludeTemplateLangFile(__FILE__);
         </div>
     </div>
 </div>
+
 <div class="like-bouquet">
     <div class="wrapper_narrow">
         <div class="example-classname"></div>
@@ -101,7 +107,7 @@ IncludeTemplateLangFile(__FILE__);
         <div class="gold-italic">
             co скидкой!
         </div>
-        <input class="button" value="Загрузи свой букет"/>
+        <input onclick="showPopupDown()" class="button button_download" value="Загрузи свой букет"/>
     </div>
 </div>
 
@@ -312,17 +318,120 @@ IncludeTemplateLangFile(__FILE__);
     false
 ); ?>
 
-<div class="popup">
+<div class="popup popupform">
     <div class="popup_bg">
-        <div class="form-picking wrapper_narrow form">
+        <form action="" class="form-picking wrapper_narrow form" method="post">
             <p class="form-picking_title">Поможем подобрать букет к любому событию</p>
             <div class="form-picking__inputs">
                 <input class="form-picking__inputs_input" type="text" placeholder="Ваше имя" required name="name">
                 <input class="form-picking__inputs_input" type="tel" placeholder="Ваш телефон" required name="phone">
                 <input class="form-picking__inputs_input" type="text" placeholder="Кому дарите?" required name="target">
                 <input class="form-picking__inputs_input" type="number" placeholder="Ваш бюджет" required name="money">
+                <input type="hidden" name="check" value="choose">
             </div>
-            <input class="button" type="button" value="Подобрать букет">
-        </div>
+            <input class="button" type="submit" value="Подобрать букет">
+        </form>
     </div>
 </div>
+
+<div class="popup popupdownload">
+    <div class="popup_bg">
+        <form action="" enctype="multipart/form-data" class="form-picking wrapper_narrow form" method="post">
+            <p class="form-picking_title">Прикрепите ваш букет</p>
+            <div class="form-picking__inputs">
+                <input class="form-picking__inputs_input" type="text" placeholder="Ваш e-mail" required name="email">
+                <input class="form-picking__inputs_input" type="tel" placeholder="Ваш телефон" required name="phone">
+                <textarea class="form-picking__inputs_input" placeholder="Ваш комментарий к букету" required name="comment"></textarea>
+                <input type="hidden" name="check" value="download">
+            </div>
+            <div class="form-picking__buttons">
+                <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+                <div class="fileform">
+                    <div id="fileformlabel"></div>
+                    <div class="selectbutton"><span>+</span>Загрузить букет</div>
+                    <input type="file" name="upload" id="upload" onchange="getName(this.value);" />
+                </div>
+                <input class="button" type="submit" value="Отправить мой букет">
+            </div>
+        </form>
+    </div>
+</div>
+
+<?php
+/*$form = new Form();
+$form->name = $_POST["name"];
+$form->phone = $_POST["phone"];
+$form->target = $_POST["target"];
+$form->money = $_POST["money"];
+$form->file = $_POST["file"];
+$form->email = $_POST["email"];
+$form->comment = $_POST["comment"];
+
+if ($_POST) {
+    $form->SendMail();
+}*/
+
+if ($_POST["check"] == "choose") {
+    $to = 'akravchenko@medialine.by';
+    $subject = 'Форма обратной связи';
+
+    $name = "ФИО - " . $_POST["name"] . "<br/>";
+    $phone = "Телефон - " . $_POST["phone"] . "<br/>";
+    $target = "Кому дарят - " . $_POST["target"] . "<br/>";
+    $money = "Бюджет - " . $_POST["money"] . "<br/>";
+    $message = $name . $phone . $target . $money;
+
+    $headers = 'Content-Type: text/html';
+
+    $mail = mail($to, $subject, $message, $headers);
+    if ($mail) { ?>
+        <div class="popup popup_message">
+            <div class="popup_bg">
+                <div class="popup_message_inside">
+                    Ваше сообщение успешно отправлено
+                </div>
+            </div>
+        </div>
+    <?php } else { ?>
+        <div class="popup popup_message">
+            <div class="popup_bg">
+                <div class="popup_message_inside">
+                    Ваше сообщение не удалось отправить.<br/>
+                    Попробуйте ещё раз или свяжитесь с нами по телефону.
+                </div>
+            </div>
+        </div>
+    <?php }
+} elseif ($_POST["check"] == "download") {
+    $to = 'akravchenko@medialine.by';
+    $subject = 'Форма обратной связи';
+
+    $email = "E-mail - " . $_POST["email"] . "<br/>";
+    $phone = "Телефон - " . $_POST["phone"] . "<br/>";
+    $comment = "Комментарий - " . $_POST["comment"] . "<br/>";
+    $file = "Букет - " . $_POST["file"] . "<br/>";
+    $message = $email . $phone . $comment . $file;
+
+    $headers = 'Content-Type: text/html';
+
+    $mail = mail($to, $subject, $message, $headers);
+    if ($mail) { ?>
+        <div class="popup popup_message">
+            <div class="popup_bg">
+                <div class="popup_message_inside">
+                    Ваше сообщение успешно отправлено
+                </div>
+            </div>
+        </div>
+    <?php } else { ?>
+        <div class="popup popup_message">
+            <div class="popup_bg">
+                <div class="popup_message_inside">
+                    Ваше сообщение не удалось отправить.<br/>
+                    Попробуйте ещё раз или свяжитесь с нами по телефону.
+                </div>
+            </div>
+        </div>
+    <?php }
+}
+?>
