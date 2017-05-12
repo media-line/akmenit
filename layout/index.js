@@ -37,16 +37,42 @@ function showPopupDown() {
     $(".popupdownload").fadeIn(800);
 }
 
-function getName (str){
-    if (str.lastIndexOf('\\')){
-        var i = str.lastIndexOf('\\')+1;
+function getName(str) {
+    if (str.lastIndexOf('\\')) {
+        var i = str.lastIndexOf('\\') + 1;
     }
-    else{
-        var i = str.lastIndexOf('/')+1;
+    else {
+        var i = str.lastIndexOf('/') + 1;
     }
     var filename = str.slice(i);
     var uploaded = document.getElementById("fileformlabel");
     uploaded.innerHTML = filename;
+    uploaded.style.display = "block";
+
+    var button = document.getElementsByClassName("selectbutton")[0];
+    button.style.display = "none";
+}
+
+function FormPosition() {
+    var target = document.getElementsByClassName("form-picking")[0];
+
+    var whole = document.getElementsByClassName("top-block")[0].clientHeight;
+    var padding = document.getElementsByClassName("wrapper-top")[0].clientHeight;
+
+    var pad = whole - (padding + 60);
+
+    target.style.top = "-" + pad + "px";
+    target.style.marginBottom = "-" + pad + "px";
+}
+
+function FormPosition2() {
+    var target2 = document.getElementsByClassName("formdownload")[0];
+
+    var dop = document.getElementsByClassName("main-top-block")[0].clientHeight;
+
+    target2.style.top = dop - 300 + "px";
+
+    console.log(dop);
 }
 
 $(document).ready(function () {
@@ -56,18 +82,26 @@ $(document).ready(function () {
         document.getElementsByTagName('head')[0].appendChild(script);
     }
 
-    if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    } else {
-        include("/bitrix/templates/akmenita/js/jquery.scrollify.js");
-    }
-
-    $(document).mouseup(function (e){ // событие клика по веб-документу
-        var div = $(".form"); // тут указываем ID элемента
+    $(document).mouseup(function (e) {
+        var div = $(".form");
         var hidden = $(".popup");
 
-        if (!div.is(e.target) // если клик был не по нашему блоку
-            && div.has(e.target).length === 0) { // и не по его дочерним элементам
-            hidden.fadeOut(800); // скрываем его
+        if (!div.is(e.target)
+            && div.has(e.target).length === 0) {
+            hidden.fadeOut(800);
         }
     });
+
+    if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        //for mobile
+        FormPosition();
+
+    } else {
+        //for desktop
+        //include("/bitrix/templates/akmenita/js/jquery.scrollify.js");
+    }
 });
+
+window.onload = function() {
+    FormPosition2();
+}

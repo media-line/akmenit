@@ -58,7 +58,7 @@
                 </div>
             <?php } ?>
         </div>
-        <input type="button" class="button" value="Смотреть ещё" onclick="Collap(0)">
+        <input type="button" class="button" value="Смотреть ещё" onclick="Collap(2)">
     </div>
 </div>
 </div>
