@@ -274,13 +274,22 @@ header {
     width: 100%;
     padding: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     box-sizing: border-box;
 }
 
 .advantage img {
-    width: auto;
+    max-width: 30%;
     margin: 0 auto;
+}
+
+.advantage .description {
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
 }
 
 .like-bouquet {
@@ -624,4 +633,17 @@ footer .title_big {
 
 .formdownload {
     top: 0;
+}
+
+.popupform .popupform {
+    margin-top: 95px !important;
+}
+
+/*for MS Edge*/
+@supports (-ms-ime-align:auto) {
+    .top-block {
+        min-height: 77vh;
+    }
+
+
 }

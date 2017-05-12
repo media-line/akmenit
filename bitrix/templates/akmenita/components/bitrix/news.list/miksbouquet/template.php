@@ -4,7 +4,7 @@
         <?php echo $arResult["NAME"] ?>
     </div>
     <div class="desc_ltl">
-        доставим сегодня
+        сделаем к нужному дню
     </div>
     <div class="main-bouquet-wrap">
         <div class="bouquet-wrap">

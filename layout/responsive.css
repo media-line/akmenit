@@ -1,7 +1,3 @@
-@media all and (min-width: 320px) {
-
-}
-
 @media all and (min-width: 480px) {
     .title_first-row {
         font-size: 44px;
@@ -22,11 +18,25 @@
     .like-bouquet .title_big {
         padding-top: 30px;
     }
+
+    .form-picking {
+        top: 0;
+        margin-bottom: 0;
+    }
 }
 
-@media all and (min-width: 600px) {
+@media all and (min-width: 590px) {
     .top-phone {
         align-items: flex-start;
+    }
+
+    .top-block {
+        padding-bottom: 45px;
+    }
+
+    .form-picking {
+        top: -30px;
+        margin-bottom: -30px;
     }
 
     .title_big {
@@ -62,7 +72,11 @@
     }
 
     .advantage {
-        min-height: 360px;
+        min-height: 95px;
+    }
+
+    .advantage img {
+        height: 30%;
     }
 
     .like-bouquet .title_big {
@@ -320,6 +334,36 @@ footer .title_big {
 
     .left-block .top-phone {
         padding-top: 3px;
+    }
+
+    .popupdownload .form-picking textarea {
+        width: 76%;
+    }
+
+    .form-picking__buttons {
+        flex-direction: row;
+        width: 76%;
+    }
+
+    .form-picking__buttons .button {
+        height: 50px;
+        padding: 16px 45px;
+    }
+
+    .fileform {
+        margin-right: 15px;
+    }
+
+    /*for MS Edge*/
+    @supports (-ms-ime-align:auto) {
+        .advantage img {
+            width: 190px;
+        }
+
+        .form-picking__buttons .button {
+            padding: 16px 15px;
+            width: 350px;
+        }
     }
 }
 

@@ -55,6 +55,7 @@ function getName(str) {
 
 function FormPosition() {
     var target = document.getElementsByClassName("form-picking")[0];
+    var target1 = document.getElementsByClassName("popupform")[0];
 
     var whole = document.getElementsByClassName("top-block")[0].clientHeight;
     var padding = document.getElementsByClassName("wrapper-top")[0].clientHeight;
@@ -69,13 +70,16 @@ function FormPosition2() {
     var target2 = document.getElementsByClassName("formdownload")[0];
 
     var dop = document.getElementsByClassName("main-top-block")[0].clientHeight;
+    //var dop = jQuery(window).scrollTop();
 
-    target2.style.top = dop - 300 + "px";
-
-    console.log(dop);
+    target2.style.top = (dop - 200) + "px";
 }
 
 $(document).ready(function () {
+    alert(document.documentElement.clientWidth);
+    alert(document.documentElement.clientHeight);
+
+
     function include(url) {
         var script = document.createElement('script');
         script.src = url;
@@ -94,8 +98,6 @@ $(document).ready(function () {
 
     if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         //for mobile
-        FormPosition();
-
     } else {
         //for desktop
         //include("/bitrix/templates/akmenita/js/jquery.scrollify.js");
@@ -103,5 +105,12 @@ $(document).ready(function () {
 });
 
 window.onload = function() {
-    FormPosition2();
+    if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        //for mobile
+        FormPosition();
+        FormPosition2();
+    } else {
+        //for desktop
+        FormPosition2();
+    }
 }
