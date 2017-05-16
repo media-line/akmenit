@@ -27,8 +27,7 @@ class Form
 
         $message = $name . $phone . $target . $money;
 
-
-        $headers = 'Content-Type: text/html';
+        $headers = 'Content-Type: text/html; charset=windows-1251';
 
         mail($to, $subject, $message, $headers);
     }

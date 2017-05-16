@@ -281,7 +281,11 @@ header {
 }
 
 .advantage img {
+<<<<<<< HEAD
     max-width: 90px;
+=======
+    max-width: 30%;
+>>>>>>> origin/master
     margin: 0 auto;
 }
 

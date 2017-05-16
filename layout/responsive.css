@@ -76,8 +76,12 @@
     }
 
     .advantage img {
+<<<<<<< HEAD
         /*height: 30%;*/
         max-width: 35%;
+=======
+        height: 30%;
+>>>>>>> origin/master
     }
 
     .like-bouquet .title_big {
@@ -378,10 +382,13 @@ footer .title_big {
         margin-right: 15px;
     }
 
+<<<<<<< HEAD
     .popupform .popupform {
         margin-top: 295px !important;
     }
 
+=======
+>>>>>>> origin/master
     /*for MS Edge*/
     @supports (-ms-ime-align:auto) {
         .advantage img {
