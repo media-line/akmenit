@@ -54,7 +54,7 @@ IncludeTemplateLangFile(__FILE__);
             <input class="form-picking__inputs_input" type="text" placeholder="Ваше имя" required name="name">
             <input class="form-picking__inputs_input" type="tel" placeholder="Ваш телефон" required name="phone">
             <input class="form-picking__inputs_input" type="text" placeholder="Кому дарите?" required name="target">
-            <input class="form-picking__inputs_input" type="number" placeholder="Ваш бюджет" required name="money">
+            <input class="form-picking__inputs_input" type="text" placeholder="Ваш бюджет" required name="money">
             <input type="hidden" name="check" value="choose">
         </div>
         <input class="button" type="submit" value="Подобрать букет">
@@ -70,7 +70,7 @@ IncludeTemplateLangFile(__FILE__);
                 </div>
                 <div class="advantage">
                     <img src="/layout/image/advantages/fresh-flowers.png" alt="Свежие цветы"/>
-                    <p class="description">Всегда только свежие цветы</p>
+                    <p class="description">Всегда только свежие<br/> цветы</p>
                 </div>
                 <div class="advantage">
                     <img src="/layout/image/advantages/assortiment.png" alt="Разнообразный ассортимент"/>
@@ -320,13 +320,13 @@ IncludeTemplateLangFile(__FILE__);
 
 <div class="popup popupform">
     <div class="popup_bg">
-        <form action="" class="form-picking wrapper_narrow form" method="post">
+        <form action="" class="form-picking wrapper_narrow form popupform" method="post">
             <p class="form-picking_title">Поможем подобрать букет к любому событию</p>
             <div class="form-picking__inputs">
                 <input class="form-picking__inputs_input" type="text" placeholder="Ваше имя" required name="name">
                 <input class="form-picking__inputs_input" type="tel" placeholder="Ваш телефон" required name="phone">
                 <input class="form-picking__inputs_input" type="text" placeholder="Кому дарите?" required name="target">
-                <input class="form-picking__inputs_input" type="number" placeholder="Ваш бюджет" required name="money">
+                <input class="form-picking__inputs_input" type="text" placeholder="Ваш бюджет" required name="money">
                 <input type="hidden" name="check" value="choose">
             </div>
             <input class="button" type="submit" value="Подобрать букет">
@@ -372,7 +372,7 @@ if ($_POST) {
 }*/
 
 if ($_POST["check"] == "choose") {
-    $to = 'akravchenko@medialine.by';
+    $to = 'flowers4u.minsk@mail.ru';
     $subject = 'Форма обратной связи';
 
     $name = "ФИО - " . $_POST["name"] . "<br/>";
@@ -381,7 +381,7 @@ if ($_POST["check"] == "choose") {
     $money = "Бюджет - " . $_POST["money"] . "<br/>";
     $message = $name . $phone . $target . $money;
 
-    $headers = 'Content-Type: text/html';
+    $headers = 'Content-Type: text/html; charset=utf-8';
 
     $mail = mail($to, $subject, $message, $headers);
     if ($mail) { ?>
@@ -403,6 +403,7 @@ if ($_POST["check"] == "choose") {
         </div>
     <?php }
 } elseif ($_POST["check"] == "download") {
+    //$to = 'flowers4u.minsk@mail.ru';
     $to = 'akravchenko@medialine.by';
     $subject = 'Форма обратной связи';
 
@@ -412,7 +413,7 @@ if ($_POST["check"] == "choose") {
     $file = "Букет - " . $_POST["file"] . "<br/>";
     $message = $email . $phone . $comment . $file;
 
-    $headers = 'Content-Type: text/html';
+    $headers = 'Content-Type: text/html; charset=utf-8';
 
     $mail = mail($to, $subject, $message, $headers);
     if ($mail) { ?>

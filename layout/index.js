@@ -3,38 +3,40 @@ function Collap(num) {
     var num = num;
     var targ = wrap[num].getElementsByClassName('bouquet__column');
 
+    /*create array with condition bouquet__column*/
     var arr = Array();
-
     for (var r = 0; r < 5; r++) {
         var style = getComputedStyle(targ[r]);
         arr.push(style.display);
     }
 
-    var count = 0;
-
+    /*show hidden bouquets*/
     for (var r = 0; r < arr.length; r++) {
-        if (arr[r] == 'block') {
-            count++;
-            if (count == 4) {
-                var tar = wrap[num].getElementsByClassName('main-bouquet-wrap')[0];
-                var tar = tar.getElementsByClassName('button')[0];
-                tar.style.display = "none";
-            }
+        if (arr[r] == 'none') {
+            targ[r].style.display = 'block';
         }
     }
 
-    targ[count].style.display = 'block';
-
-    console.log(count);
+    /*hide button "See more"*/
+    var tar = wrap[num].getElementsByClassName('main-bouquet-wrap')[0];
+    var tar = tar.getElementsByClassName('button')[0];
+    tar.style.display = "none";
 }
 
 function showPopup() {
     $(".popupform").fadeIn(800);
-
+    $("body").css("cursor", "pointer");
 }
 
 function showPopupDown() {
+    /*show popup with form*/
     $(".popupdownload").fadeIn(800);
+
+    /*position popup with form*/
+    var dop = window.pageYOffset;
+    var target2 = document.getElementsByClassName("formdownload")[0];
+
+    target2.style.top = dop + 40 + "px";
 }
 
 function getName(str) {
@@ -65,16 +67,6 @@ function FormPosition() {
     target.style.marginBottom = "-" + pad + "px";
 }
 
-function FormPosition2() {
-    var target2 = document.getElementsByClassName("formdownload")[0];
-
-    var dop = document.getElementsByClassName("main-top-block")[0].clientHeight;
-
-    target2.style.top = dop - 300 + "px";
-
-    console.log(dop);
-}
-
 $(document).ready(function () {
     function include(url) {
         var script = document.createElement('script');
@@ -89,19 +81,16 @@ $(document).ready(function () {
         if (!div.is(e.target)
             && div.has(e.target).length === 0) {
             hidden.fadeOut(800);
+            $("body").css("cursor", "auto");
         }
     });
-
-    if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        //for mobile
-        FormPosition();
-
-    } else {
-        //for desktop
-        //include("/bitrix/templates/akmenita/js/jquery.scrollify.js");
-    }
 });
 
 window.onload = function() {
-    FormPosition2();
+    if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        //for mobile
+        FormPosition();
+    } else {
+        //for desktop
+    }
 }

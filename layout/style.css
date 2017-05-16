@@ -42,7 +42,7 @@ body {
     font-family: 'Playfair Display', serif;
 }
 
-input:focus {
+input:focus, textarea:focus {
     border: none !important;
 }
 
@@ -274,13 +274,24 @@ header {
     width: 100%;
     padding: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     box-sizing: border-box;
+    height: 110px;
+    padding-left: 0;
 }
 
 .advantage img {
-    width: auto;
+    max-width: 90px;
     margin: 0 auto;
+}
+
+.advantage .description {
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
 }
 
 .like-bouquet {
@@ -465,7 +476,14 @@ footer .title_big {
 }
 
 .bottom-footer div a {
-    padding-left: 15px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.bottom-footer div a img {
+    margin-left: 15px;
 }
 
 .example-classname {
@@ -543,7 +561,7 @@ footer .title_big {
 }
 
 .popupdownload .form-picking {
-    top: 135vh;
+    margin-top: 0;
 }
 
 .popupdownload .form-picking textarea {
@@ -624,4 +642,17 @@ footer .title_big {
 
 .formdownload {
     top: 0;
+}
+
+.popupform .popupform {
+    margin-top: 95px !important;
+}
+
+/*for MS Edge*/
+@supports (-ms-ime-align:auto) {
+    .top-block {
+        min-height: 77vh;
+    }
+
+
 }

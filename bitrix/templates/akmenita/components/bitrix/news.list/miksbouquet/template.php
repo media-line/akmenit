@@ -4,7 +4,7 @@
         <?php echo $arResult["NAME"] ?>
     </div>
     <div class="desc_ltl">
-        доставим сегодня
+        сделаем к нужному дню
     </div>
     <div class="main-bouquet-wrap">
         <div class="bouquet-wrap">
@@ -23,15 +23,15 @@
                                 alt="<?= $arResult["ITEMS"][$key*2]["PREVIEW_PICTURE"]["ALT"] ?>"
                                 title="<?= $arResult["ITEMS"][$key*2]["PREVIEW_PICTURE"]["TITLE"] ?>"
                         />
-                        <img
+<!--                        <img
                                 class="hover-pic"
                                 border="0"
-                                src="<?= $arResult["ITEMS"][$key*2]["DETAIL_PICTURE"]["SRC"] ?>"
-                                width="<?= $arResult["ITEMS"][$key*2]["DETAIL_PICTURE"]["WIDTH"] ?>"
-                                height="<?= $arResult["ITEMS"][$key*2]["DETAIL_PICTURE"]["HEIGHT"] ?>"
-                                alt="<?= $arResult["ITEMS"][$key*2]["DETAIL_PICTURE"]["ALT"] ?>"
-                                title="<?= $arResult["ITEMS"][$key*2]["DETAIL_PICTURE"]["TITLE"] ?>"
-                        />
+                                src="<?/*= $arResult["ITEMS"][$key*2]["DETAIL_PICTURE"]["SRC"] */?>"
+                                width="<?/*= $arResult["ITEMS"][$key*2]["DETAIL_PICTURE"]["WIDTH"] */?>"
+                                height="<?/*= $arResult["ITEMS"][$key*2]["DETAIL_PICTURE"]["HEIGHT"] */?>"
+                                alt="<?/*= $arResult["ITEMS"][$key*2]["DETAIL_PICTURE"]["ALT"] */?>"
+                                title="<?/*= $arResult["ITEMS"][$key*2]["DETAIL_PICTURE"]["TITLE"] */?>"
+                        />-->
                         <p class="product-name"><?php echo $arResult["ITEMS"][$key*2]["NAME"]; ?></p>
                     </div>
                     <div class="element bottom-element">
@@ -44,15 +44,15 @@
                                 alt="<?= $arResult["ITEMS"][($key*2)+1]["PREVIEW_PICTURE"]["ALT"] ?>"
                                 title="<?= $arResult["ITEMS"][($key*2)+1]["PREVIEW_PICTURE"]["TITLE"] ?>"
                         />
-                        <img
+<!--                        <img
                                 class="hover-pic"
                                 border="0"
-                                src="<?= $arResult["ITEMS"][($key*2)+1]["DETAIL_PICTURE"]["SRC"] ?>"
-                                width="<?= $arResult["ITEMS"][($key*2)+1]["DETAIL_PICTURE"]["WIDTH"] ?>"
-                                height="<?= $arResult["ITEMS"][($key*2)+1]["DETAIL_PICTURE"]["HEIGHT"] ?>"
-                                alt="<?= $arResult["ITEMS"][($key*2)+1]["DETAIL_PICTURE"]["ALT"] ?>"
-                                title="<?= $arResult["ITEMS"][($key*2)+1]["DETAIL_PICTURE"]["TITLE"] ?>"
-                        />
+                                src="<?/*= $arResult["ITEMS"][($key*2)+1]["DETAIL_PICTURE"]["SRC"] */?>"
+                                width="<?/*= $arResult["ITEMS"][($key*2)+1]["DETAIL_PICTURE"]["WIDTH"] */?>"
+                                height="<?/*= $arResult["ITEMS"][($key*2)+1]["DETAIL_PICTURE"]["HEIGHT"] */?>"
+                                alt="<?/*= $arResult["ITEMS"][($key*2)+1]["DETAIL_PICTURE"]["ALT"] */?>"
+                                title="<?/*= $arResult["ITEMS"][($key*2)+1]["DETAIL_PICTURE"]["TITLE"] */?>"
+                        />-->
                         <p class="product-name"><?php echo $arResult["ITEMS"][($key*2)+1]["NAME"]; ?></p>
                     </div>
                 </div>

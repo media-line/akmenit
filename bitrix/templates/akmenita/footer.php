@@ -21,7 +21,7 @@
                 <input class="form-picking__inputs_input" type="text" placeholder="Ваше имя" required name="name">
                 <input class="form-picking__inputs_input" type="tel" placeholder="Ваш телефон" required name="phone">
                 <input class="form-picking__inputs_input" type="text" placeholder="Кому дарите?" required name="target">
-                <input class="form-picking__inputs_input" type="number" placeholder="Ваш бюджет" required name="money">
+                <input class="form-picking__inputs_input" type="text" placeholder="Ваш бюджет" required name="money">
                 <input type="hidden" name="check" value="choose">
             </div>
             <input class="button" type="submit" value="Подобрать букет">
@@ -29,7 +29,7 @@
     </div>
     <div class="wrapper bottom-footer">
         <div>&#169; 2017, Акменита</div>
-        <div>Разработка сайта<a href="http://www.medialine.by" target="_blank" class="copiright"><img src="/layout/image/copiright.png" /></a></div>
+        <div><a href="http://www.medialine.by" target="_blank" class="copiright">Разработка сайта<img src="/layout/image/copiright.png" /></a></div>
     </div>
 </footer>
 </body>
