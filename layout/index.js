@@ -84,6 +84,8 @@ $(document).ready(function () {
             $("body").css("cursor", "auto");
         }
     });
+
+    include('/bitrix/templates/akmenita/js/gjquery.scrollify.js');
 });
 
 window.onload = function() {
