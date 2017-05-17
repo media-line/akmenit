@@ -2,10 +2,11 @@ function Collap(num) {
     var wrap = document.getElementsByClassName('bouquet');
     var num = num;
     var targ = wrap[num].getElementsByClassName('bouquet__column');
+    var count = wrap[num].getElementsByClassName('bouquet__column').length;
 
     /*create array with condition bouquet__column*/
     var arr = Array();
-    for (var r = 0; r < 5; r++) {
+    for (var r = 0; r < count; r++) {
         var style = getComputedStyle(targ[r]);
         arr.push(style.display);
     }
@@ -31,6 +32,7 @@ function showPopup() {
 function showPopupDown() {
     /*show popup with form*/
     $(".popupdownload").fadeIn(800);
+    $("body").css("cursor", "pointer");
 
     /*position popup with form*/
     var dop = window.pageYOffset;
@@ -57,7 +59,6 @@ function getName(str) {
 
 function FormPosition() {
     var target = document.getElementsByClassName("form-picking")[0];
-    var target1 = document.getElementsByClassName("popupform")[0];
 
     var whole = document.getElementsByClassName("top-block")[0].clientHeight;
     var padding = document.getElementsByClassName("wrapper-top")[0].clientHeight;
@@ -68,29 +69,18 @@ function FormPosition() {
     target.style.marginBottom = "-" + pad + "px";
 }
 
-<<<<<<< HEAD
-=======
-function FormPosition2() {
-    var target2 = document.getElementsByClassName("formdownload")[0];
+function CheckPopup() {
+    var target = document.getElementsByClassName("popup_message");
+    var getComputedStyle = window.getComputedStyle(target[0], null);
 
-    var dop = document.getElementsByClassName("main-top-block")[0].clientHeight;
-    //var dop = jQuery(window).scrollTop();
-
-    target2.style.top = (dop - 200) + "px";
+    if (getComputedStyle.display == "block") {
+        $("body").css("cursor", "pointer");
+    } else {
+        $("body").css("cursor", "auto");
+    }
 }
 
->>>>>>> origin/master
 $(document).ready(function () {
-    alert(document.documentElement.clientWidth);
-    alert(document.documentElement.clientHeight);
-
-
-    function include(url) {
-        var script = document.createElement('script');
-        script.src = url;
-        document.getElementsByTagName('head')[0].appendChild(script);
-    }
-
     $(document).mouseup(function (e) {
         var div = $(".form");
         var hidden = $(".popup");
@@ -102,31 +92,19 @@ $(document).ready(function () {
         }
     });
 
-    include('/bitrix/templates/akmenita/js/gjquery.scrollify.js');
+    CheckPopup();
 });
 
-window.onload = function() {
-    if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        //for mobile
-<<<<<<< HEAD
-        FormPosition();
-=======
->>>>>>> origin/master
-    } else {
-        //for desktop
-    }
-<<<<<<< HEAD
-=======
-});
+window.onload = function () {
+    /*ClosePopupSafari();*/
 
-window.onload = function() {
     if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         //for mobile
         FormPosition();
-        FormPosition2();
     } else {
         //for desktop
-        FormPosition2();
+        var script = document.createElement('script');
+        script.src = "/bitrix/templates/akmenita/js/jquery.scrollify.js";
+        document.getElementsByTagName('head')[0].appendChild(script);
     }
->>>>>>> origin/master
-}
+};

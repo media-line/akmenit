@@ -1,4 +1,4 @@
-<div class="bouquet">
+<div class="bouquet first-block">
     <div class="title_big title_big_boquet">
         <div class="example-classname"></div>
         <?php echo $arResult["NAME"] ?>

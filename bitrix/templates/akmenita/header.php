@@ -43,7 +43,7 @@ IncludeTemplateLangFile(__FILE__);
                 <div class="title center-column">
                     <p class="title_first-row">Лучшая цена</p>
                     <p class="title_second-row">на розы из Эквадора и Колумбии</p>
-                    <p class="gold-italic">от 2,5р за услугу</p>
+                    <p class="gold-italic">от 2,5р за штуку</p>
                 </div>
             </div>
         </div>
@@ -112,8 +112,8 @@ IncludeTemplateLangFile(__FILE__);
 </div>
 
 <? $APPLICATION->IncludeComponent(
-	"bitrix:news.list",
-	"bouquet",
+	"bitrix:news.list", 
+	"bouquet", 
 	array(
 		"DISPLAY_DATE" => "N",
 		"DISPLAY_NAME" => "Y",
@@ -122,10 +122,10 @@ IncludeTemplateLangFile(__FILE__);
 		"AJAX_MODE" => "Y",
 		"IBLOCK_TYPE" => "bouquets",
 		"IBLOCK_ID" => "1",
-		"NEWS_COUNT" => "10",
+		"NEWS_COUNT" => "8",
 		"SORT_BY1" => "SORT",
 		"SORT_ORDER1" => "ASC",
-		"SORT_BY2" => "SORT",
+		"SORT_BY2" => "ID",
 		"SORT_ORDER2" => "ASC",
 		"FILTER_NAME" => "",
 		"FIELD_CODE" => array(
@@ -181,8 +181,8 @@ IncludeTemplateLangFile(__FILE__);
 ); ?>
 
 <? $APPLICATION->IncludeComponent(
-	"bitrix:news.list",
-	"miksbouquet",
+	"bitrix:news.list", 
+	"miksbouquet", 
 	array(
 		"DISPLAY_DATE" => "N",
 		"DISPLAY_NAME" => "Y",
@@ -194,7 +194,7 @@ IncludeTemplateLangFile(__FILE__);
 		"NEWS_COUNT" => "10",
 		"SORT_BY1" => "SORT",
 		"SORT_ORDER1" => "ASC",
-		"SORT_BY2" => "SORT",
+		"SORT_BY2" => "ID",
 		"SORT_ORDER2" => "ASC",
 		"FILTER_NAME" => "",
 		"FIELD_CODE" => array(
@@ -250,8 +250,8 @@ IncludeTemplateLangFile(__FILE__);
 ); ?>
 
 <? $APPLICATION->IncludeComponent(
-	"bitrix:news.list",
-	"boxbouquet",
+	"bitrix:news.list", 
+	"boxbouquet", 
 	array(
 		"DISPLAY_DATE" => "N",
 		"DISPLAY_NAME" => "Y",
@@ -263,7 +263,7 @@ IncludeTemplateLangFile(__FILE__);
 		"NEWS_COUNT" => "10",
 		"SORT_BY1" => "SORT",
 		"SORT_ORDER1" => "ASC",
-		"SORT_BY2" => "SORT",
+		"SORT_BY2" => "ID",
 		"SORT_ORDER2" => "ASC",
 		"FILTER_NAME" => "",
 		"FIELD_CODE" => array(
